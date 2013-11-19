@@ -4,7 +4,7 @@ name := "bio4j-neo4jdb"
 
 description := "bio4j-neo4jdb project"
 
-organization := "bio4j"
+organization := "ohnosequences"
 
 bucketSuffix := "era7.com"
 
