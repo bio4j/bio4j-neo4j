@@ -8,8 +8,8 @@ import com.amazonaws.auth.PropertiesCredentials;
 import com.amazonaws.services.s3.AmazonS3Client;
 import com.amazonaws.services.s3.model.*;
 import com.era7.bioinfo.bio4j.CommonData;
-import com.era7.lib.bioinfo.bioinfoutil.Executable;
-import com.era7.lib.bioinfo.bioinfoutil.genbank.GBCommon;
+import com.era7.bioinfo.bioinfoutil.Executable;
+import com.era7.bioinfo.bioinfoutil.genbank.GBCommon;
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
 import java.io.File;
@@ -143,6 +143,8 @@ public class UploadRefSeqSequencesToS3 implements Executable {
                             }
 
                         }
+                        
+                        reader.close();
 
                     }
                 }

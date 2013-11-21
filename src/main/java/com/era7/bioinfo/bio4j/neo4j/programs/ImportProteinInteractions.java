@@ -21,8 +21,8 @@ import com.era7.bioinfo.bio4j.neo4j.model.nodes.IsoformNode;
 import com.era7.bioinfo.bio4j.neo4j.model.nodes.ProteinNode;
 import com.era7.bioinfo.bio4j.neo4j.model.relationships.protein.ProteinIsoformInteractionRel;
 import com.era7.bioinfo.bio4j.neo4j.model.relationships.protein.ProteinProteinInteractionRel;
-import com.era7.lib.bioinfo.bioinfoutil.Executable;
-import com.era7.lib.era7xmlapi.model.XMLElement;
+import com.era7.bioinfo.bioinfoutil.Executable;
+import com.era7.era7xmlapi.model.XMLElement;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -32,7 +32,7 @@ import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
-import org.jdom.Element;
+import org.jdom2.Element;
 import org.neo4j.graphdb.index.IndexHits;
 import org.neo4j.helpers.collection.MapUtil;
 import org.neo4j.index.lucene.unsafe.batchinsert.LuceneBatchInserterIndexProvider;
@@ -241,6 +241,7 @@ public class ImportProteinInteractions implements Executable {
                     }
                 }
 
+                reader.close();
 
             } catch (Exception e) {
                 logger.log(Level.SEVERE, ("Exception retrieving protein " + accessionSt));

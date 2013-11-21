@@ -16,7 +16,7 @@
  */
 package com.era7.bioinfo.bio4j.neo4j.programs;
 
-import com.era7.lib.bioinfo.bioinfoutil.ExecuteFromFile;
+import com.era7.bioinfo.bioinfoutil.ExecuteFromFile;
 
 /**
  *

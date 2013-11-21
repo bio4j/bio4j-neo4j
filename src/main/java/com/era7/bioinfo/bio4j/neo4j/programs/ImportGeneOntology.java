@@ -17,26 +17,22 @@
 package com.era7.bioinfo.bio4j.neo4j.programs;
 
 import com.era7.bioinfo.bio4j.neo4j.model.relationships.go.PartOfGoRel;
-import com.era7.bioinfo.bio4j.neo4j.model.relationships.go.BiologicalProcessRel;
-import com.era7.bioinfo.bio4j.neo4j.model.relationships.go.MainGoRel;
 import com.era7.bioinfo.bio4j.neo4j.model.relationships.go.RegulatesGoRel;
 import com.era7.bioinfo.bio4j.neo4j.model.relationships.go.HasPartOfGoRel;
 import com.era7.bioinfo.bio4j.neo4j.model.relationships.go.NegativelyRegulatesGoRel;
 import com.era7.bioinfo.bio4j.neo4j.model.relationships.go.IsAGoRel;
-import com.era7.bioinfo.bio4j.neo4j.model.relationships.go.MolecularFunctionRel;
 import com.era7.bioinfo.bio4j.neo4j.model.relationships.go.PositivelyRegulatesGoRel;
-import com.era7.bioinfo.bio4j.neo4j.model.relationships.go.CellularComponentRel;
 import com.era7.bioinfo.bio4j.neo4j.model.nodes.GoTermNode;
 import com.era7.bioinfo.bio4j.neo4j.model.util.Bio4jManager;
-import com.era7.lib.bioinfo.bioinfoutil.Executable;
-import com.era7.lib.era7xmlapi.model.XMLElement;
+import com.era7.bioinfo.bioinfoutil.Executable;
+import com.era7.era7xmlapi.model.XMLElement;
 import java.io.*;
 import java.util.*;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
-import org.jdom.Element;
+import org.jdom2.Element;
 import org.neo4j.helpers.collection.MapUtil;
 import org.neo4j.index.lucene.unsafe.batchinsert.LuceneBatchInserterIndexProvider;
 import org.neo4j.unsafe.batchinsert.*;
@@ -133,10 +129,6 @@ public class ImportGeneOntology implements Executable {
                 PositivelyRegulatesGoRel positivelyRegulatesGoRel = new PositivelyRegulatesGoRel(null);
                 PartOfGoRel partOfGoRel = new PartOfGoRel(null);
                 HasPartOfGoRel hasPartGoRel = new HasPartOfGoRel(null);
-                MainGoRel mainGoRel = new MainGoRel(null);
-                CellularComponentRel cellularComponentRel = new CellularComponentRel(null);
-                BiologicalProcessRel biologicalProcessRel = new BiologicalProcessRel(null);
-                MolecularFunctionRel molecularFunctionRel = new MolecularFunctionRel(null);
                 //--------------------------------------------------------------------------
 
                 Map<String, ArrayList<String>> termParentsMap = new HashMap<String, ArrayList<String>>();
@@ -289,24 +281,7 @@ public class ImportGeneOntology implements Executable {
                         }
                         //--------indexing node by node_type index----------
                         nodeTypeIndex.add(currentGoTermId, MapUtil.map(Bio4jManager.NODE_TYPE_INDEX_NAME,GoTermNode.NODE_TYPE));
-
-                        //----IS ROOT ? ----
-                        Element isRootElem = termXMLElement.asJDomElement().getChild(IS_ROOT_TAG_NAME);
-                        if (isRootElem != null) {
-                            String temp = isRootElem.getTextTrim();
-                            if (temp.equals("1")) {
-                                inserter.createRelationship(inserter.getReferenceNode(), currentGoTermId, mainGoRel, null);
-                                if (goId.equals(MOLECULAR_FUNCTION_GO_ID)) {
-                                    inserter.createRelationship(inserter.getReferenceNode(), currentGoTermId, molecularFunctionRel, null);
-                                } else if (goId.equals(BIOLOGICAL_PROCESS_GO_ID)) {
-                                    inserter.createRelationship(inserter.getReferenceNode(), currentGoTermId, biologicalProcessRel, null);
-                                } else if (goId.equals(CELLULAR_COMPONENT_GO_ID)) {
-                                    inserter.createRelationship(inserter.getReferenceNode(), currentGoTermId, cellularComponentRel, null);
-                                }
-
-                            }
-                        }
-                        //----------------------                        
+                     
 
                     }
                     termCounter++;

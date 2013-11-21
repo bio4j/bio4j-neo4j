@@ -22,8 +22,8 @@ import com.era7.bioinfo.bio4j.neo4j.model.nodes.refseq.GenomeElementNode;
 import com.era7.bioinfo.bio4j.neo4j.model.nodes.refseq.rna.*;
 import com.era7.bioinfo.bio4j.neo4j.model.relationships.refseq.*;
 import com.era7.bioinfo.bio4j.neo4j.model.util.Bio4jManager;
-import com.era7.lib.bioinfo.bioinfoutil.Executable;
-import com.era7.lib.bioinfo.bioinfoutil.genbank.GBCommon;
+import com.era7.bioinfo.bioinfoutil.Executable;
+import com.era7.bioinfo.bioinfoutil.genbank.GBCommon;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -449,6 +449,8 @@ public class ImportRefSeq implements Executable {
                             genomeElementCounter++;
 
                         }
+                        
+                        reader.close();
 
                     }
                 }

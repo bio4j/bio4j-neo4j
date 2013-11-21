@@ -18,7 +18,7 @@ package com.era7.bioinfo.bio4j.neo4j.programs;
 
 import com.era7.bioinfo.bio4j.neo4j.model.nodes.IsoformNode;
 import com.era7.bioinfo.bio4j.neo4j.model.util.Bio4jManager;
-import com.era7.lib.bioinfo.bioinfoutil.Executable;
+import com.era7.bioinfo.bioinfoutil.Executable;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.logging.FileHandler;

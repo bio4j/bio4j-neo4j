@@ -25,7 +25,7 @@ import com.era7.bioinfo.bio4j.neo4j.model.relationships.aproducts.AlternativePro
 import com.era7.bioinfo.bio4j.neo4j.model.relationships.protein.*;
 import com.era7.bioinfo.bio4j.neo4j.model.relationships.sc.*;
 import com.era7.bioinfo.bio4j.neo4j.model.util.Bio4jManager;
-import com.era7.lib.bioinfo.bioinfoutil.Executable;
+import com.era7.bioinfo.bioinfoutil.Executable;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;

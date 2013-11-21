@@ -18,7 +18,7 @@ package com.era7.bioinfo.bio4j.neo4j.programs;
 
 import com.era7.bioinfo.bio4j.neo4j.model.nodes.EnzymeNode;
 import com.era7.bioinfo.bio4j.neo4j.model.util.Bio4jManager;
-import com.era7.lib.bioinfo.bioinfoutil.Executable;
+import com.era7.bioinfo.bioinfoutil.Executable;
 import java.io.*;
 import java.util.*;
 import java.util.logging.FileHandler;
@@ -217,6 +217,8 @@ public class ImportEnzymeDB implements Executable {
                     }
 
                 }
+                
+                reader.close();
 
 
             } catch (Exception e) {
