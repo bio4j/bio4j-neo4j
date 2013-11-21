@@ -8,7 +8,7 @@ organization := "ohnosequences"
 
 bucketSuffix := "era7.com"
 
-libraryDependencies += "ohnosequences" % "bio4j-model" % "0.2.0"
+libraryDependencies += "ohnosequences" % "bio4j-model" % "0.3.1-SNAPSHOT"
 
 libraryDependencies += "ohnosequences" % "bioinfo-util" % "1.2.0"
 
