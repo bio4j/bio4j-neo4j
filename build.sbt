@@ -10,7 +10,7 @@ bucketSuffix := "era7.com"
 
 libraryDependencies += "ohnosequences" % "bio4j-model" % "0.3.1-SNAPSHOT"
 
-libraryDependencies += "ohnosequences" % "bioinfo-util" % "1.2.0"
+libraryDependencies += "ohnosequences" % "bioinfo-util" % "1.3.0-SNAPSHOT"
 
 dependencyOverrides += "com.fasterxml.jackson.core" % "jackson-core" % "2.1.2"
 
