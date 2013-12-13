@@ -12,36 +12,27 @@ organization := "ohnosequences"
 
 bucketSuffix := "era7.com"
 
-scalaVersion := "2.10.2"
+libraryDependencies ++= Seq(
+  "ohnosequences" % "bio4j-model" % "0.3.0-SNAPSHOT",
+  "ohnosequences" % "bioinfo-util" % "1.3.0-SNAPSHOT"
+)
 
+dependencyOverrides ++= Set(
+  "com.fasterxml.jackson.core" % "jackson-core" % "2.1.2",
+  "com.fasterxml.jackson.core" % "jackson-databind" % "2.1.2",
+  "commons-beanutils" % "commons-beanutils" % "1.8.3",
+  "commons-beanutils" % "commons-beanutils-core" % "1.8.3"
+)
+
+// fat jar assembly settings
 mainClass in assembly := Some("com.ohnosequences.bio4j.neo4j.programs.ImportNeo4jDB")
 
-libraryDependencies += "ohnosequences" % "bio4j-model" % "0.3.1-SNAPSHOT"
+assemblyOption in assembly ~= { _.copy(includeScala = false) }
 
-libraryDependencies += "ohnosequences" % "bioinfo-util" % "1.3.0-SNAPSHOT"
-
-dependencyOverrides += "com.fasterxml.jackson.core" % "jackson-core" % "2.1.2"
-
-dependencyOverrides += "com.fasterxml.jackson.core" % "jackson-databind" % "2.1.2"
-
-// needed for fat jar
-dependencyOverrides += "commons-beanutils" % "commons-beanutils" % "1.8.2"
-
-dependencyOverrides += "commons-beanutils" % "commons-beanutils-core" % "1.8.2"
-
-
-// fat jar merge settings
-// see http://stackoverflow.com/questions/14402745/duplicate-classes-in-commons-collections-and-commons-beanutils
-mergeStrategy in assembly <<= (mergeStrategy in assembly) { (old) =>
-  {
-    case PathList("META-INF", "CHANGES.txt")                            => MergeStrategy.discard
-    case PathList("META-INF", "LICENSES.txt")                           => MergeStrategy.discard
-    case "log4j.properties"                                             => MergeStrategy.filterDistinctLines
-    case PathList("org", "apache", "commons", "collections",  xs @ _*)  => MergeStrategy.first
-    case PathList("index.html")                                         => MergeStrategy.first
-    case x                                                              => old(x)
+mergeStrategy in assembly ~= { old => {
+    case PathList("META-INF", "CHANGES.txt")                     => MergeStrategy.rename
+    case PathList("META-INF", "LICENSES.txt")                    => MergeStrategy.rename
+    case PathList("org", "apache", "commons", "collections", _*) => MergeStrategy.first
+    case x                                                       => old(x)
   }
 }
-
-// get rid of the Scala library
-assemblyOption in assembly ~= { _.copy(includeScala = false) }
