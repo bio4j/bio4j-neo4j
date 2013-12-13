@@ -1,3 +1,5 @@
+import AssemblyKeys._
+
 Nice.javaProject
 
 Nice.fatArtifactSettings
@@ -9,6 +11,8 @@ description := "bio4j-neo4jdb project"
 organization := "ohnosequences"
 
 bucketSuffix := "era7.com"
+
+scalaVersion := "2.10.2"
 
 libraryDependencies += "ohnosequences" % "bio4j-model" % "0.3.1-SNAPSHOT"
 
