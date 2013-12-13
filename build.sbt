@@ -14,6 +14,8 @@ bucketSuffix := "era7.com"
 
 scalaVersion := "2.10.2"
 
+mainClass in assembly := Some("com.ohnosequences.bio4j.neo4j.programs.ImportNeo4jDB")
+
 libraryDependencies += "ohnosequences" % "bio4j-model" % "0.3.1-SNAPSHOT"
 
 libraryDependencies += "ohnosequences" % "bioinfo-util" % "1.3.0-SNAPSHOT"
