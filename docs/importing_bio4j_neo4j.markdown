@@ -28,7 +28,7 @@ Here's the link to the official website describing how to [install JDK 7 for Lin
 
 ### 7. Get the last versions of the following files:
 
-- [neo4jdb-0.x.x-fat.jar](/releases.markdown)
+- [neo4jdb-0.x.x-fat.jar](/releases.markdown) _(get the correponding jar file for the release you want to use)_
 - [executionsBio4j.xml](/executionsBio4j.xml) _(this file can be customized in order to just import a sub-set of the data available)_
 - [batchInserter.properties](/batchInserter.properties)  _**IMPORTANT** -->(this file should be changed according to the amount of RAM memory available in your machine)_
 - [uniprotData.xml](/uniprotData.xml) _This file will only be used in the case where you want to import Uniprot module. (Set the boolean flags included in the XML file to true/false depending on your choice of data you want to import from Uniprot)_
