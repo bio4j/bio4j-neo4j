@@ -14,7 +14,7 @@ bucketSuffix := "era7.com"
 
 libraryDependencies ++= Seq(
   "bio4j" % "model" % "0.3.3",
-  "ohnosequences" % "bioinfo-util" % "1.4.0-SNAPSHOT"
+  "ohnosequences" % "bioinfo-util" % "1.3.0"
 )
 
 dependencyOverrides ++= Set(
