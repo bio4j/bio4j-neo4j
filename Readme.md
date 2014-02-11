@@ -2,6 +2,7 @@
 
 This is the repository including the Neo4j implementation of Bio4j.
 
-### [Bio4j Cypher cheat sheet](docs/cypher_cheat_sheet.markdown)
+### Using a query language
 
-### [Bio4j Gremlin cheat sheet](docs/gremlin_cheat_sheet.markdown)
+* [**Cypher** cheat sheet](docs/cypher_cheat_sheet.markdown)
+* [**Gremlin** cheat sheet](docs/gremlin_cheat_sheet.markdown)
