@@ -1,3 +1,5 @@
+
+![](docs/gremlin_logo.jpg)
 # Gremlin cheat sheet
 
 ## Retrieving basic info from nodes
