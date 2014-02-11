@@ -5,7 +5,7 @@ _(If you are not using AWS please go directly to step 6)_
 ### 1. Launch a new AWS instance (preferably m2.2xlarge)
   
 ### 2. Create a EBS volume of 1 TB
-_You would only need so much space in the case where you're importing all modules and you are not deleting input files once a module import process is done._
+> _You would only need so much space in the case where you're importing all modules and you are not deleting input files once a module import process is done._
 
 ### 3. Attach the volume to the instance
 
