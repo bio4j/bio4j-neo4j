@@ -1,0 +1,28 @@
+<scheduled_executions>      
+        <execution>
+                <class_full_name>com.ohnosequences.bio4j.neo4j.programs.InitBio4jDB</class_full_name>
+                <arguments>
+                        <argument>bio4jdb</argument>
+                        <argument>batchInserter.properties</argument>
+                </arguments>
+        </execution>     
+		<execution>
+                <class_full_name>com.ohnosequences.bio4j.neo4j.programs.ImportNCBITaxonomy</class_full_name>
+                <arguments>
+                        <argument>nodes.dmp</argument>
+                        <argument>names.dmp</argument>
+                        <argument>merged.dmp</argument>
+                        <argument>bio4jdb</argument>
+                        <argument>true</argument>
+                </arguments>
+        </execution>
+        
+        <execution>
+                <class_full_name>com.ohnosequences.bio4j.neo4j.programs.IndexNCBITaxonomyByGiId</class_full_name>
+                <arguments>
+                        <argument>gi_taxid_nucl.dmp</argument>
+                        <argument>bio4jdb</argument>
+                        <argument>batchInserter.properties</argument>                        
+                </arguments>
+        </execution>  
+</scheduled_executions>
