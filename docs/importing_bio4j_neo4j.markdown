@@ -1,10 +1,11 @@
-Please follow this step-by-step guide to build your own Bio4j database from scratch.
+Please follow this step-by-step guide to build your own Bio4j database from scratch including all modules.
 
 _(If you are not using AWS please go directly to step 6)_
 
 ### 1. Launch a new AWS instance (preferably m2.2xlarge)
   
-### 2. Create a EBS volume of ~400 GB
+### 2. Create a EBS volume of 1 TB
+_You would only need so much space in the case where you're importing all modules and you are not deleting input files once a module import process is done._
 
 ### 3. Attach the volume to the instance
 
@@ -28,9 +29,9 @@ Here's the link to the official website describing how to [install JDK 7 for Lin
 ### 7. Get the last versions of the following files:
 
 - [ExecuteBio4jTool.jar](https://s3-eu-west-1.amazonaws.com/bio4j-public/releases/0.9/ExecuteBio4jTool.jar)
-- [executionsBio4j.xml](https://github.com/bio4j/Bio4j/blob/master/executionsBio4j.xml) _(this file can be customized in order to just import a sub-set of the data available)_
-- [batchInserter.properties](https://github.com/bio4j/Bio4j/blob/master/batchInserter.properties)  _**IMPORTANT** -->(this file should be changed according to the amount of RAM memory available in your machine)_
-- [uniprotData.xml](https://github.com/bio4j/Bio4j/blob/master/uniprotData.xml) _This file will only be used in the case where you want to import Uniprot module. (Set the boolean flags included in the XML file to true/false depending on your choice of data you want to import from Uniprot)_
+- [executionsBio4j.xml](/executionsBio4j.xml) _(this file can be customized in order to just import a sub-set of the data available)_
+- [batchInserter.properties](/batchInserter.properties)  _**IMPORTANT** -->(this file should be changed according to the amount of RAM memory available in your machine)_
+- [uniprotData.xml](/uniprotData.xml) _This file will only be used in the case where you want to import Uniprot module. (Set the boolean flags included in the XML file to true/false depending on your choice of data you want to import from Uniprot)_
    
 ### 8. Download and execute the following bash script:
 
@@ -58,14 +59,14 @@ The corresponding executions.xml file should look like this:
 ``` xml
 <scheduled_executions>
   <execution>
-    <class_full_name>com.era7.bioinfo.bio4j.programs.InitBio4jDB</class_full_name>
+    <class_full_name>com.ohnosequences.bio4j.neo4j.programs.InitBio4jDB</class_full_name>
     <arguments>
       <argument>bio4jdb</argument>
       <argument>batchInserter.properties</argument>
     </arguments>
   </execution>
   <execution>
-    <class_full_name>com.era7.bioinfo.bio4j.programs.ImportEnzymeDB</class_full_name>
+    <class_full_name>com.ohnosequences.bio4j.neo4j.programs.ImportEnzymeDB</class_full_name>
     <arguments>
       <argument>enzyme.dat</argument>
       <argument>bio4jdb</argument>
@@ -73,7 +74,7 @@ The corresponding executions.xml file should look like this:
     </arguments>
   </execution>
   <execution>
-    <class_full_name>com.era7.bioinfo.bio4j.programs.ImportGeneOntology</class_full_name>
+    <class_full_name>com.ohnosequences.bio4j.neo4j.programs.ImportGeneOntology</class_full_name>
     <arguments>
       <argument>go.xml</argument>
       <argument>bio4jdb</argument>
@@ -81,7 +82,7 @@ The corresponding executions.xml file should look like this:
     </arguments>
   </execution>
   <execution>
-    <class_full_name>com.era7.bioinfo.bio4j.programs.ImportUniprot</class_full_name>
+    <class_full_name>com.ohnosequences.bio4j.neo4j.programs.ImportUniprot</class_full_name>
     <arguments>
       <argument>uniprot_sprot.xml</argument>
       <argument>bio4jdb</argument>
@@ -89,7 +90,7 @@ The corresponding executions.xml file should look like this:
     </arguments>
   </execution>
   <execution>
-    <class_full_name>com.era7.bioinfo.bio4j.programs.ImportNCBITaxonomy</class_full_name>
+    <class_full_name>com.ohnosequences.bio4j.neo4j.programs.ImportNCBITaxonomy</class_full_name>
     <arguments>
       <argument>nodes.dmp</argument>
       <argument>names.dmp</argument>
