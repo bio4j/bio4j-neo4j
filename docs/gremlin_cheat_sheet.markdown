@@ -1,6 +1,9 @@
 ![](/docs/gremlin_logo.jpg)
 # Gremlin cheat sheet
 
+Gremlin is a graph traversal language that can be used for graph query, analysis, and manipulation. Gremlin works over those graph databases/frameworks that implement the Blueprints property graph data model and thus works with Bio4j too!
+Here you have some usage examples:
+
 ## Retrieving basic info from nodes
 
 Get protein by its accession number and return its full name
