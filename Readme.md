@@ -11,8 +11,8 @@ Please visit the section [Importing Bio4j](/docs/importing_bio4j_neo4j.markdown)
 
 ### AWS _(Amazon Web Services)_ users 
 
-* Check the section [**AWS Releases**](/docs/aws_releases.markdown) in order to find the corresponding information for the release you're interested in.
-* [**CloudFormation**](/docs/cloudformation_neo4j.markdown) templates check this section to see how you can benefit from this AWS service together with Bio4j.
+* [**AWS Releases**](/docs/aws_releases.markdown) You can find here the corresponding information for the release you're interested in.
+* [**CloudFormation templates**](/docs/cloudformation_neo4j.markdown) Check this section to see how you can benefit from [Cloud Formation](http://aws.amazon.com/cloudformation/) service together with Bio4j.
 
 
 ### Using a query language
