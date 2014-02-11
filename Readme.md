@@ -1,6 +1,10 @@
-### bio4j-neo4jdb project
+# bio4j-neo4jdb
 
-This is the repository including the Neo4j implementation of Bio4j.
+Welcome to the Neo4j implementation of Bio4j!
+
+## Technology benefits
+
+![http://www.neo4j.org/](/docs/neo4j_logo.png)
 
 ### Using a query language
 
