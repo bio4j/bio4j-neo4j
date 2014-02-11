@@ -1,6 +1,7 @@
 # bio4j-neo4jdb
 
 Welcome to the Neo4j implementation of Bio4j!
+In order to get general information regarding Bio4j project please go to our [main repository](https://github.com/bio4j/bio4j).
 
 ## Getting started
 
