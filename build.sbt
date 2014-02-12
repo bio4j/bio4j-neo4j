@@ -8,12 +8,12 @@ organization := "bio4j"
 
 name := "neo4jdb"
 
-description := "neo4jdb implementation of the Bio4j model"
+description := "Neo4jdb implementation of the Bio4j model"
 
 bucketSuffix := "era7.com"
 
 libraryDependencies ++= Seq(
-  "bio4j" % "model" % "0.3.3",
+  "bio4j" % "blueprints" % "0.4.0",
   "ohnosequences" % "bioinfo-util" % "1.3.0"
 )
 
