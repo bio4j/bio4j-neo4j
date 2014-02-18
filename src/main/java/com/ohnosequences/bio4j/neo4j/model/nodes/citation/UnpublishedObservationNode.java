@@ -54,7 +54,7 @@ public class UnpublishedObservationNode extends BasicEntity{
     
     /**
      * Gets the author of the unpublished observation
-     * @return 
+     * @return Unpublished observation author
      */
     public PersonNode getAuthor(){
         Iterator<Relationship> iterator = this.node.getRelationships(new UnpublishedObservationAuthorRel(null), Direction.OUTGOING).iterator();

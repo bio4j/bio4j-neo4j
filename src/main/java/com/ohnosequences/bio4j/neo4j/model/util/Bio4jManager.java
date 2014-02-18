@@ -141,7 +141,7 @@ public class Bio4jManager extends Neo4jManager {
     /**
      * Creates a new node
      * @param nodeType Type of the new node
-     * @return 
+     * @return The node that was just created
      */
     public Node createNode(String nodeType){
         Node node = createNode();

@@ -59,7 +59,7 @@ public class NCBITaxonNode extends BasicEntity{
 
     /**
      * 
-     * @return 
+     * @return The parent of the current node
      */
     public NCBITaxonNode getParent(){
         NCBITaxonNode parent = null;
@@ -74,7 +74,7 @@ public class NCBITaxonNode extends BasicEntity{
     
     /**
      * 
-     * @return 
+     * @return A list holding the children of the current node
      */
     public List<NCBITaxonNode> getChildren(){
         List<NCBITaxonNode> list = new ArrayList<NCBITaxonNode>();

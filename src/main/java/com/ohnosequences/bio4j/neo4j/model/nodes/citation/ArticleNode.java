@@ -88,7 +88,7 @@ public class ArticleNode extends BasicEntity{
     }
     /**
      * gets the article journal
-     * @return 
+     * @return Journal where the article was published
      */
     public JournalNode getJournal(){
         Iterator<Relationship> iterator = this.node.getRelationships(new ArticleJournalRel(null), Direction.OUTGOING).iterator();
@@ -100,7 +100,7 @@ public class ArticleNode extends BasicEntity{
     }
     /**
      * gets consortium authors (if any) of the article
-     * @return 
+     * @return Consortiums that are authors of this article
      */
     public List<ConsortiumNode> getConsortiumAuthors(){
         List<ConsortiumNode> list = new ArrayList<ConsortiumNode>();
@@ -115,7 +115,7 @@ public class ArticleNode extends BasicEntity{
     }
     /**
      * gets person authors (if any) of the article
-     * @return 
+     * @return List of authors of the article
      */
     public List<PersonNode> getPersonAuthors(){
         List<PersonNode> list = new ArrayList<PersonNode>();

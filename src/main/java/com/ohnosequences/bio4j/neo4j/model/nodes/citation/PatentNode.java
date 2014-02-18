@@ -64,7 +64,7 @@ public class PatentNode extends BasicEntity{
 
     /**
      * gets authors (if any) of the patent
-     * @return 
+     * @return Patent authors
      */
     public List<PersonNode> getAuthors(){
         List<PersonNode> list = new ArrayList<PersonNode>();

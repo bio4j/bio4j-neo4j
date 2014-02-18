@@ -72,7 +72,7 @@ public class BookNode extends BasicEntity{
     
     /**
      * Gets the Book publisher
-     * @return 
+     * @return Publisher of the book
      */
     public PublisherNode getPublisher(){
         Iterator<Relationship> iterator = node.getRelationships(new BookPublisherRel(null), Direction.OUTGOING).iterator();
@@ -85,7 +85,7 @@ public class BookNode extends BasicEntity{
     
     /**
      * Gets the city where the book was published
-     * @return 
+     * @return City where the book was published
      */
     public CityNode getCity(){
         Iterator<Relationship> iterator = node.getRelationships(new BookCityRel(null), Direction.OUTGOING).iterator();
@@ -98,7 +98,7 @@ public class BookNode extends BasicEntity{
     
     /**
      * gets the authors of the book
-     * @return 
+     * @return List holding the authors of the book
      */
     public List<PersonNode> getAuthors(){
         List<PersonNode> list = new ArrayList<PersonNode>();
@@ -110,7 +110,7 @@ public class BookNode extends BasicEntity{
     }
     /**
      * gets the editors of the book
-     * @return 
+     * @return Editors of the book
      */
     public List<PersonNode> getEditors(){
         List<PersonNode> list = new ArrayList<PersonNode>();

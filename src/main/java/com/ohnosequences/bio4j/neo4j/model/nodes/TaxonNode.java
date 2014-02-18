@@ -51,7 +51,7 @@ public class TaxonNode extends BasicEntity{
 
     /**
      * 
-     * @return 
+     * @return The Taxon parent of the current node
      */
     public TaxonNode getParent(){
         TaxonNode parent = null;
@@ -66,7 +66,7 @@ public class TaxonNode extends BasicEntity{
     
     /**
      * 
-     * @return 
+     * @return A list holding the taxon children of the current node
      */
     public List<TaxonNode> getChildren(){
         List<TaxonNode> list = new ArrayList<TaxonNode>();
@@ -85,7 +85,7 @@ public class TaxonNode extends BasicEntity{
     
     /**
      * 
-     * @return 
+     * @return The organisms associated to the current node
      */
     public List<OrganismNode> getOrganisms(){
         List<OrganismNode> list = new ArrayList<OrganismNode>();

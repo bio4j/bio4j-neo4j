@@ -62,7 +62,7 @@ public class ThesisNode extends BasicEntity{
     
     /**
      * Gets the thesis Institute
-     * @return 
+     * @return Institute where the thesis was developed
      */
     public InstituteNode getInstitute(){
         Iterator<Relationship> iterator = this.node.getRelationships(new ThesisInstituteRel(null), Direction.OUTGOING).iterator();
@@ -75,7 +75,7 @@ public class ThesisNode extends BasicEntity{
     
     /**
      * Gets the thesis author
-     * @return 
+     * @return Thesis author
      */
     public PersonNode getAuthor(){
         Iterator<Relationship> iterator = this.node.getRelationships(new ThesisAuthorRel(null), Direction.OUTGOING).iterator();

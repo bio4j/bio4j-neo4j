@@ -101,7 +101,7 @@ public class GoTermNode extends BasicEntity{
     
     /**
      * 
-     * @return 
+     * @return "Is a go" linked nodes 
      */
     public List<GoTermNode> getIsAGoNodes(){
         List<GoTermNode> list = new ArrayList<GoTermNode>();

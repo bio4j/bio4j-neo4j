@@ -434,7 +434,7 @@ public class ProteinNode extends BasicEntity {
     
     /**
      * Protein-Isoform outgoing interactions
-     * @return 
+     * @return A list of ProteinIsoformInteraction relationships
      */
     public List<ProteinIsoformInteractionRel> getIsoformOutgoingInteractions(){
         List<ProteinIsoformInteractionRel> list = new ArrayList<ProteinIsoformInteractionRel>();
@@ -449,7 +449,7 @@ public class ProteinNode extends BasicEntity {
     
     /**
      * Protein-Isoform incoming interactions
-     * @return 
+     * @return A list of ProteinIsoformInteraction relationships
      */
     public List<ProteinIsoformInteractionRel> getIsoformIncomingInteractions(){
         List<ProteinIsoformInteractionRel> list = new ArrayList<ProteinIsoformInteractionRel>();
@@ -468,7 +468,7 @@ public class ProteinNode extends BasicEntity {
     
     /**
      * Protein article citations
-     * @return 
+     * @return A list of articles
      */
     public List<ArticleNode> getArticleCitations(){
         List<ArticleNode> list = new ArrayList<ArticleNode>();
@@ -481,7 +481,7 @@ public class ProteinNode extends BasicEntity {
     }
     /**
      * Protein submission citations
-     * @return 
+     * @return A list of submissions
      */
     public List<SubmissionNode> getSubmissionCitations(){
         List<SubmissionNode> list = new ArrayList<SubmissionNode>();
@@ -494,7 +494,7 @@ public class ProteinNode extends BasicEntity {
     }
     /**
      * Protein Online article citations
-     * @return 
+     * @return A list of online articles
      */
     public List<OnlineArticleNode> getOnlineArticleCitations(){
         List<OnlineArticleNode> list = new ArrayList<OnlineArticleNode>();
@@ -507,7 +507,7 @@ public class ProteinNode extends BasicEntity {
     } 
     /**
      * Protein Book citations
-     * @return 
+     * @return A list of books
      */
     public List<BookNode> getBookCitations(){
         List<BookNode> list = new ArrayList<BookNode>();
@@ -520,7 +520,7 @@ public class ProteinNode extends BasicEntity {
     }
     /**
      * Protein patent citations
-     * @return 
+     * @return A list of patents
      */
     public List<PatentNode> getPatentCitations(){
         List<PatentNode> list = new ArrayList<PatentNode>();
@@ -533,7 +533,7 @@ public class ProteinNode extends BasicEntity {
     }
     /**
      * Protein thesis citations
-     * @return 
+     * @return A list of Thesis
      */
     public List<ThesisNode> getThesisCitations(){
         List<ThesisNode> list = new ArrayList<ThesisNode>();
@@ -546,7 +546,7 @@ public class ProteinNode extends BasicEntity {
     }
     /**
      * Protein unpublished observations citations
-     * @return 
+     * @return A list of unpublished observations
      */
     public List<UnpublishedObservationNode> getUnpublishedObservationsCitations(){
         List<UnpublishedObservationNode> list = new ArrayList<UnpublishedObservationNode>();

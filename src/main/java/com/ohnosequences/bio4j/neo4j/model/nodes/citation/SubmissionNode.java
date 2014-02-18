@@ -62,7 +62,7 @@ public class SubmissionNode extends BasicEntity{
     
     /**
      * Gets the submission DB
-     * @return 
+     * @return Submission database
      */
     public DBNode getDB(){
         Iterator<Relationship> iterator = this.node.getRelationships(new SubmissionDbRel(null), Direction.OUTGOING).iterator();
@@ -75,7 +75,7 @@ public class SubmissionNode extends BasicEntity{
     
     /**
      * gets consortium authors (if any) of the submission
-     * @return 
+     * @return Consortium authors of the submission
      */
     public List<ConsortiumNode> getConsortiumAuthors(){
         List<ConsortiumNode> list = new ArrayList<ConsortiumNode>();
@@ -90,7 +90,7 @@ public class SubmissionNode extends BasicEntity{
     }
     /**
      * gets person authors (if any) of the submission
-     * @return 
+     * @return Submission authors
      */
     public List<PersonNode> getPersonAuthors(){
         List<PersonNode> list = new ArrayList<PersonNode>();

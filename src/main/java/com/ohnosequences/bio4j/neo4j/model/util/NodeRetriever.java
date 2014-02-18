@@ -684,7 +684,7 @@ public class NodeRetriever {
     /**
      * 
      * @param featureTypeName
-     * @return 
+     * @return The FeatureType node with the name provided
      */
     public FeatureTypeNode getFeatureTypeByName(String featureTypeName){
         IndexHits<Node> hits = manager.getFeatureTypeNameIndex().get(FeatureTypeNode.FEATURE_TYPE_NAME_INDEX, featureTypeName);
@@ -699,7 +699,7 @@ public class NodeRetriever {
     /**
      * 
      * @param commentTypeName
-     * @return 
+     * @return The comment type node with the name provided
      */
     public CommentTypeNode getCommentTypeByName(String commentTypeName){
         IndexHits<Node> hits = manager.getCommentTypeNameIndex().get(CommentTypeNode.COMMENT_TYPE_NAME_INDEX, commentTypeName);
@@ -714,7 +714,7 @@ public class NodeRetriever {
     /**
      * 
      * @param subcellularLocationName
-     * @return 
+     * @return The subcellular location node with the name provided
      */
     public SubcellularLocationNode getSubcellularLocationByName(String subcellularLocationName){
         IndexHits<Node> hits = manager.getSubcellularLocationNameIndex().get(SubcellularLocationNode.SUBCELLULAR_LOCATION_NAME_INDEX, subcellularLocationName);

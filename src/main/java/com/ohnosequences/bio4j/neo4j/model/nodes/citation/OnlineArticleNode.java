@@ -62,7 +62,7 @@ public class OnlineArticleNode extends BasicEntity{
     
     /**
      * Gets the online journal where the online article was submitted
-     * @return 
+     * @return Online journal where the online article was published
      */
     public OnlineJournalNode getOnlineJournal(){
         Iterator<Relationship> iterator = this.node.getRelationships(new OnlineArticleJournalRel(null), Direction.OUTGOING).iterator();
@@ -75,7 +75,7 @@ public class OnlineArticleNode extends BasicEntity{
     
     /**
      * gets consortium authors (if any) of the online article
-     * @return 
+     * @return Consortium authors of the online article
      */
     public List<ConsortiumNode> getConsortiumAuthors(){
         List<ConsortiumNode> list = new ArrayList<ConsortiumNode>();
@@ -90,7 +90,7 @@ public class OnlineArticleNode extends BasicEntity{
     }
     /**
      * gets person authors (if any) of the online article
-     * @return 
+     * @return Authors of the online article
      */
     public List<PersonNode> getPersonAuthors(){
         List<PersonNode> list = new ArrayList<PersonNode>();

@@ -73,7 +73,7 @@ public class GenomeElementNode extends BasicEntity{
     
     /**
      * 
-     * @return 
+     * @return A list of CDS associated to this node
      */
     public List<CDSNode> getCDS(){
         List<CDSNode> list = new ArrayList<CDSNode>();
@@ -85,7 +85,7 @@ public class GenomeElementNode extends BasicEntity{
     }
     /**
      * 
-     * @return 
+     * @return A list holding the genes linked to this node 
      */
     public List<GeneNode> getGenes(){
         List<GeneNode> list = new ArrayList<GeneNode>();
@@ -97,7 +97,7 @@ public class GenomeElementNode extends BasicEntity{
     }
     /**
      * 
-     * @return 
+     * @return A list holding the MRNAs linked to this node 
      */
     public List<MRNANode> getMRnas(){
         List<MRNANode> list = new ArrayList<MRNANode>();
@@ -109,7 +109,7 @@ public class GenomeElementNode extends BasicEntity{
     }
     /**
      * 
-     * @return 
+     * @return A list holding the MiscRNAs linked to this node
      */
     public List<MiscRNANode> getMiscRnas(){
         List<MiscRNANode> list = new ArrayList<MiscRNANode>();
@@ -121,7 +121,7 @@ public class GenomeElementNode extends BasicEntity{
     }
     /**
      * 
-     * @return 
+     * @return A list holding the NcRNAs linked to this node
      */
     public List<NcRNANode> getNcRnas(){
         List<NcRNANode> list = new ArrayList<NcRNANode>();
@@ -133,7 +133,7 @@ public class GenomeElementNode extends BasicEntity{
     }
     /**
      * 
-     * @return 
+     * @return A list holding the RRNAs linked to this node
      */
     public List<RRNANode> getRRnas(){
         List<RRNANode> list = new ArrayList<RRNANode>();
@@ -145,7 +145,7 @@ public class GenomeElementNode extends BasicEntity{
     }
     /**
      * 
-     * @return 
+     * @return A list holding the TRNAs linked to this node
      */
     public List<TRNANode> getTRnas(){
         List<TRNANode> list = new ArrayList<TRNANode>();
@@ -157,7 +157,7 @@ public class GenomeElementNode extends BasicEntity{
     }
     /**
      * 
-     * @return 
+     * @return A list holding the TmRNAs linked to this node
      */
     public List<TmRNANode> getTmRnas(){
         List<TmRNANode> list = new ArrayList<TmRNANode>();
