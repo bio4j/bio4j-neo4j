@@ -7,7 +7,6 @@ package com.ohnosequences.bio4j.neo4j.programs;
 import com.amazonaws.auth.PropertiesCredentials;
 import com.amazonaws.services.s3.AmazonS3Client;
 import com.amazonaws.services.s3.model.*;
-import com.ohnosequences.bio4j.CommonData;
 import com.ohnosequences.util.Executable;
 import com.ohnosequences.util.genbank.GBCommon;
 import java.io.BufferedReader;
@@ -41,12 +40,14 @@ public class UploadRefSeqSequencesToS3 implements Executable {
     public static void main(String[] args) {
 
 
-        if (args.length != 1) {
-            System.out.println("This program expects one parameter: \n"
-                    + "1. Folder name with all the .gbk files \n");
+        if (args.length != 2) {
+            System.out.println("This program expects the following parameters: \n"
+            		+ "1. Bucket name \n"
+                    + "2. Folder name with all the .gbk files");
         } else {
 
-            File currentFolder = new File(args[0]);
+        	String bucketName = args[0];
+            File currentFolder = new File(args[1]);
 
             File[] files = currentFolder.listFiles();
 
@@ -62,7 +63,7 @@ public class UploadRefSeqSequencesToS3 implements Executable {
 
                 //--------creating amazon s3 client--------------
                 AmazonS3Client amazonS3Client = new AmazonS3Client(new PropertiesCredentials(new File("AwsCredentials.properties")));
-                Owner bucketOwner = amazonS3Client.getBucketAcl(CommonData.REFSEQ_BUCKET_NAME).getOwner();
+                Owner bucketOwner = amazonS3Client.getBucketAcl(bucketName).getOwner();
                 //--------------------------------
 
 
@@ -129,11 +130,11 @@ public class UploadRefSeqSequencesToS3 implements Executable {
                                 ObjectMetadata objectMetadata = new ObjectMetadata();
                                 objectMetadata.setContentLength(byteArray.length);
                                 logger.log(Level.INFO, ("uploading sequence of genome element: " + versionSt + " ..."));
-                                amazonS3Client.putObject(CommonData.REFSEQ_BUCKET_NAME, versionSt + ".txt", bs, objectMetadata);
+                                amazonS3Client.putObject(bucketName, versionSt + ".txt", bs, objectMetadata);
                                 AccessControlList accessControlList = new AccessControlList();
                                 accessControlList.grantPermission(GroupGrantee.AllUsers, Permission.Read);
                                 accessControlList.setOwner(bucketOwner);
-                                amazonS3Client.setObjectAcl(CommonData.REFSEQ_BUCKET_NAME, versionSt + ".txt", accessControlList);
+                                amazonS3Client.setObjectAcl(bucketName, versionSt + ".txt", accessControlList);
                                 logger.log(Level.INFO, ("done!"));
                                 //--------------------------------------
 

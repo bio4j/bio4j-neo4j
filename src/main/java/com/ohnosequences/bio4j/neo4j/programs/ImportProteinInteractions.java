@@ -16,13 +16,14 @@
  */
 package com.ohnosequences.bio4j.neo4j.programs;
 
-import com.ohnosequences.bio4j.CommonData;
 import com.ohnosequences.bio4j.neo4j.model.nodes.IsoformNode;
 import com.ohnosequences.bio4j.neo4j.model.nodes.ProteinNode;
 import com.ohnosequences.bio4j.neo4j.model.relationships.protein.ProteinIsoformInteractionRel;
 import com.ohnosequences.bio4j.neo4j.model.relationships.protein.ProteinProteinInteractionRel;
+import com.ohnosequences.bio4j.neo4j.model.util.UniprotStuff;
 import com.ohnosequences.util.Executable;
 import com.ohnosequences.xml.api.model.XMLElement;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -32,6 +33,7 @@ import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
+
 import org.jdom2.Element;
 import org.neo4j.graphdb.index.IndexHits;
 import org.neo4j.helpers.collection.MapUtil;
@@ -51,7 +53,7 @@ public class ImportProteinInteractions implements Executable {
     //--------indexing API constans-----
     private static String PROVIDER_ST = "provider";
     private static String EXACT_ST = "exact";
-    private static String FULL_TEXT_ST = "fulltext";
+    //private static String FULL_TEXT_ST = "fulltext";
     private static String LUCENE_ST = "lucene";
     private static String TYPE_ST = "type";
     //-----------------------------------
@@ -138,9 +140,9 @@ public class ImportProteinInteractions implements Executable {
 
 
                 while ((line = reader.readLine()) != null) {
-                    if (line.trim().startsWith("<" + CommonData.ENTRY_TAG_NAME)) {
+                    if (line.trim().startsWith("<" + UniprotStuff.ENTRY_TAG_NAME)) {
 
-                        while (!line.trim().startsWith("</" + CommonData.ENTRY_TAG_NAME + ">")) {
+                        while (!line.trim().startsWith("</" + UniprotStuff.ENTRY_TAG_NAME + ">")) {
                             entryStBuilder.append(line);
                             line = reader.readLine();
                         }
@@ -150,16 +152,16 @@ public class ImportProteinInteractions implements Executable {
                         XMLElement entryXMLElem = new XMLElement(entryStBuilder.toString());
                         entryStBuilder.delete(0, entryStBuilder.length());
 
-                        accessionSt = entryXMLElem.asJDomElement().getChildText(CommonData.ENTRY_ACCESSION_TAG_NAME);
+                        accessionSt = entryXMLElem.asJDomElement().getChildText(UniprotStuff.ENTRY_ACCESSION_TAG_NAME);
 
 
                         long currentProteinId = proteinAccessionIndex.get(ProteinNode.PROTEIN_ACCESSION_INDEX, accessionSt).getSingle();
 
-                        List<Element> comments = entryXMLElem.asJDomElement().getChildren(CommonData.COMMENT_TAG_NAME);
+                        List<Element> comments = entryXMLElem.asJDomElement().getChildren(UniprotStuff.COMMENT_TAG_NAME);
 
                         for (Element commentElem : comments) {
 
-                            String commentTypeSt = commentElem.getAttributeValue(CommonData.COMMENT_TYPE_ATTRIBUTE);
+                            String commentTypeSt = commentElem.getAttributeValue(UniprotStuff.COMMENT_TYPE_ATTRIBUTE);
 
                             //----------interaction----------------
                             if (commentTypeSt.equals(ProteinProteinInteractionRel.UNIPROT_ATTRIBUTE_TYPE_VALUE)) {

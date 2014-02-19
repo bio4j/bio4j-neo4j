@@ -16,7 +16,6 @@
  */
 package com.ohnosequences.bio4j.neo4j.codesamples;
 
-import com.ohnosequences.bio4j.CommonData;
 import com.ohnosequences.bio4j.neo4j.model.nodes.InterproNode;
 import com.ohnosequences.bio4j.neo4j.model.nodes.OrganismNode;
 import com.ohnosequences.bio4j.neo4j.model.nodes.ProteinNode;
@@ -27,9 +26,11 @@ import com.ohnosequences.bio4j.neo4j.model.relationships.protein.ProteinInterpro
 import com.ohnosequences.bio4j.neo4j.model.relationships.protein.ProteinOrganismRel;
 import com.ohnosequences.bio4j.neo4j.model.util.Bio4jManager;
 import com.ohnosequences.bio4j.neo4j.model.util.NodeRetriever;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+
 import org.neo4j.graphdb.Direction;
 import org.neo4j.graphdb.Relationship;
 
@@ -45,99 +46,103 @@ public class RealUseCase1 {
 
     public static void main(String[] args) {
 
+    	
+    	if (args.length != 1) {
+            System.out.println("The program expects the following parameters: \n"
+                    + "1. Bio4j DB folder\n");
+        } else {
+        	Bio4jManager manager = null;
 
-        Bio4jManager manager = null;
-
-        try {
-            
-            //--creating manager and node retriever----
-            manager = new Bio4jManager(CommonData.DATABASE_FOLDER);
-            NodeRetriever nodeRetriever = new NodeRetriever(manager);
-
-            //First we get the taxon node we're interested in
-            TaxonNode taxonNode = nodeRetriever.getTaxonByName("Enterobacteriaceae");
-            
-            System.out.println("taxonNode = " + taxonNode);
-
-            //In this list we're gonna store the organism nodes
-            ArrayList<OrganismNode> organisms = new ArrayList<OrganismNode>();
-
-            System.out.println("Getting organisms...");
-            
-            //Now we get the organisms
-            getAllSubOrganisms(taxonNode,organisms);
-            
-            //Here we'll store selected proteins
-            ArrayList<ProteinNode> proteins = new ArrayList<ProteinNode>();
-            
-            //getting proteins for those organisms and selecting the ones
-            //that have the interpro value = IPR000847
-            ProteinOrganismRel proteinOrganismRel = new ProteinOrganismRel(null);
-            ProteinInterproRel proteinInterproRel = new ProteinInterproRel(null);
-            
-            System.out.println("looping through organisms...");
-            
-            //----------looping through organisms checking every associated protein----
-            for (OrganismNode organismNode : organisms) {
+            try {
                 
-                System.out.println("organismNode = " + organismNode);
+                //--creating manager and node retriever----
+                manager = new Bio4jManager(args[0]);
+                NodeRetriever nodeRetriever = new NodeRetriever(manager);
+
+                //First we get the taxon node we're interested in
+                TaxonNode taxonNode = nodeRetriever.getTaxonByName("Enterobacteriaceae");
                 
-                Iterator<Relationship> iterator = organismNode.getNode().getRelationships(proteinOrganismRel, Direction.INCOMING).iterator();
-                while(iterator.hasNext()){                    
-                    ProteinNode tempProt = new ProteinNode(iterator.next().getStartNode());
+                System.out.println("taxonNode = " + taxonNode);
+
+                //In this list we're gonna store the organism nodes
+                ArrayList<OrganismNode> organisms = new ArrayList<OrganismNode>();
+
+                System.out.println("Getting organisms...");
+                
+                //Now we get the organisms
+                getAllSubOrganisms(taxonNode,organisms);
+                
+                //Here we'll store selected proteins
+                ArrayList<ProteinNode> proteins = new ArrayList<ProteinNode>();
+                
+                //getting proteins for those organisms and selecting the ones
+                //that have the interpro value = IPR000847
+                ProteinOrganismRel proteinOrganismRel = new ProteinOrganismRel(null);
+                ProteinInterproRel proteinInterproRel = new ProteinInterproRel(null);
+                
+                System.out.println("looping through organisms...");
+                
+                //----------looping through organisms checking every associated protein----
+                for (OrganismNode organismNode : organisms) {
                     
-                    Iterator<Relationship> interProIterator = tempProt.getNode().getRelationships(proteinInterproRel, Direction.OUTGOING).iterator();
-                    boolean interproFound = false;
-                    while(interProIterator.hasNext() && !interproFound){
-                        InterproNode interpro = new InterproNode(interProIterator.next().getEndNode());
-                        if(interpro.getId().equals("IPR000847")){
-                            interproFound = true;
+                    System.out.println("organismNode = " + organismNode);
+                    
+                    Iterator<Relationship> iterator = organismNode.getNode().getRelationships(proteinOrganismRel, Direction.INCOMING).iterator();
+                    while(iterator.hasNext()){                    
+                        ProteinNode tempProt = new ProteinNode(iterator.next().getStartNode());
+                        
+                        Iterator<Relationship> interProIterator = tempProt.getNode().getRelationships(proteinInterproRel, Direction.OUTGOING).iterator();
+                        boolean interproFound = false;
+                        while(interProIterator.hasNext() && !interproFound){
+                            InterproNode interpro = new InterproNode(interProIterator.next().getEndNode());
+                            if(interpro.getId().equals("IPR000847")){
+                                interproFound = true;
+                            }
+                        }
+                        
+                        //---the protein is selected in case it has the interpro id---
+                        if(interproFound){
+                            proteins.add(tempProt);
                         }
                     }
+                }
+                
+                System.out.println("looping through proteins...");
+                
+                //At this point we should already have the proteins we want
+                //now it's time to retrieve their CDS sequences
+                for (ProteinNode proteinNode : proteins) {
                     
-                    //---the protein is selected in case it has the interpro id---
-                    if(interproFound){
-                        proteins.add(tempProt);
+                    System.out.println("protein = " + proteinNode.getAccession());
+                    
+                    List<GenomeElementNode> genomeElements = proteinNode.getGenomeElements();
+                    
+                    for (GenomeElementNode genomeElementNode : genomeElements) {
+                        
+                        System.out.println("genomeElement = " + genomeElementNode.getVersion());
+                        
+                        List<CDSNode> cdsList = genomeElementNode.getCDS();
+                        for (CDSNode cDSNode : cdsList) {
+                            System.out.println("cDSNode = " + cDSNode);
+                        }
                     }
                 }
+                
+                System.out.println("Done! :)");
+                
+
+
+
+            } catch (Exception e) {
+                //deal somehow with the exception
+                e.printStackTrace();
+            } finally {
+
+                //---closing the manager----
+                manager.shutDown();
+
             }
-            
-            System.out.println("looping through proteins...");
-            
-            //At this point we should already have the proteins we want
-            //now it's time to retrieve their CDS sequences
-            for (ProteinNode proteinNode : proteins) {
-                
-                System.out.println("protein = " + proteinNode.getAccession());
-                
-                List<GenomeElementNode> genomeElements = proteinNode.getGenomeElements();
-                
-                for (GenomeElementNode genomeElementNode : genomeElements) {
-                    
-                    System.out.println("genomeElement = " + genomeElementNode.getVersion());
-                    
-                    List<CDSNode> cdsList = genomeElementNode.getCDS();
-                    for (CDSNode cDSNode : cdsList) {
-                        System.out.println("cDSNode = " + cDSNode);
-                    }
-                }
-            }
-            
-            System.out.println("Done! :)");
-            
-
-
-
-        } catch (Exception e) {
-            //deal somehow with the exception
-            e.printStackTrace();
-        } finally {
-
-            //---closing the manager----
-            manager.shutDown();
-
-        }
-
+        }     
 
 
     }

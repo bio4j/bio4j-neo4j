@@ -155,7 +155,7 @@ public class GoUtil {
             goAnnotationXML = GoUtil.getGoAnnotation(proteins, manager);
         }
 
-        int goTermsLostNotIncludedInSlimSet = 0;
+        //int goTermsLostNotIncludedInSlimSet = 0;
 
         Index<Node> goTermIdIndex = manager.getGoTermIdIndex();
 

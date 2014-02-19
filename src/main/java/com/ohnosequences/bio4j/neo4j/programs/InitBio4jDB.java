@@ -47,7 +47,7 @@ public class InitBio4jDB implements Executable {
     //--------indexing API constans-----
     private static String PROVIDER_ST = "provider";
     private static String EXACT_ST = "exact";
-    private static String FULL_TEXT_ST = "fulltext";
+    //private static String FULL_TEXT_ST = "fulltext";
     private static String LUCENE_ST = "lucene";
     private static String TYPE_ST = "type";
     //-----------------------------------
