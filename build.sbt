@@ -13,7 +13,7 @@ description := "Neo4jdb implementation of the Bio4j model"
 bucketSuffix := "era7.com"
 
 libraryDependencies ++= Seq(
-  "bio4j" % "blueprints" % "0.5.0-SNAPSHOT",
+  "bio4j" % "bio4j" % "0.11.0-SNAPSHOT",
   "ohnosequences" % "bioinfo-util" % "1.3.0"
 )
 
