@@ -19,7 +19,7 @@ package com.bio4j.neo4j.model.relationships.citation.patent;
 
 import com.bio4j.neo4j.model.nodes.ProteinNode;
 import com.bio4j.neo4j.model.nodes.citation.PatentNode;
-import com.ohnosequences.neo4j.BasicRelationship;
+import com.bio4j.neo4j.BasicRelationship;
 import org.neo4j.graphdb.Relationship;
 
 /**

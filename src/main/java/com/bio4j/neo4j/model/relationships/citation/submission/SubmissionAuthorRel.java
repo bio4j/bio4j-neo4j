@@ -18,7 +18,7 @@
 package com.bio4j.neo4j.model.relationships.citation.submission;
 
 import com.bio4j.neo4j.model.nodes.citation.SubmissionNode;
-import com.ohnosequences.neo4j.BasicRelationship;
+import com.bio4j.neo4j.BasicRelationship;
 import org.neo4j.graphdb.Relationship;
 
 /**

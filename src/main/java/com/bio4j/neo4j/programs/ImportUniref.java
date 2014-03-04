@@ -22,7 +22,7 @@ import com.bio4j.neo4j.model.relationships.uniref.UniRef100MemberRel;
 import com.bio4j.neo4j.model.relationships.uniref.UniRef50MemberRel;
 import com.bio4j.neo4j.model.relationships.uniref.UniRef90MemberRel;
 import com.bio4j.neo4j.model.util.UniprotStuff;
-import com.ohnosequences.neo4j.BasicRelationship;
+import com.bio4j.neo4j.BasicRelationship;
 import com.ohnosequences.util.Executable;
 import com.ohnosequences.xml.api.model.XMLElement;
 
