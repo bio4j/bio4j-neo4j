@@ -38,7 +38,7 @@ import com.bio4j.neo4j.model.relationships.protein.*;
 import com.bio4j.neo4j.model.relationships.uniref.UniRef100MemberRel;
 import com.bio4j.neo4j.model.relationships.uniref.UniRef50MemberRel;
 import com.bio4j.neo4j.model.relationships.uniref.UniRef90MemberRel;
-import com.ohnosequences.neo4j.BasicEntity;
+import com.bio4j.neo4j.BasicEntity;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;

@@ -19,7 +19,6 @@ libraryDependencies ++= Seq(
   "org.apache.httpcomponents" % "httpclient" % "4.2",
   "org.apache.commons" % "commons-math" % "2.1",
   "org.jdom" % "jdom" % "2.0.2"
-  // "ohnosequences" % "bioinfo-util" % "1.3.0"
 )
 
 dependencyOverrides ++= Set(

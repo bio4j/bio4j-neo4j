@@ -19,7 +19,7 @@ package com.bio4j.neo4j.model.nodes.reactome;
 
 import com.bio4j.neo4j.model.nodes.ProteinNode;
 import com.bio4j.neo4j.model.relationships.protein.ProteinReactomeRel;
-import com.ohnosequences.neo4j.BasicEntity;
+import com.bio4j.neo4j.BasicEntity;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;

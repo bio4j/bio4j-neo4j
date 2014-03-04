@@ -18,7 +18,7 @@
 package com.bio4j.neo4j.model.nodes.refseq;
 
 import com.bio4j.neo4j.model.relationships.refseq.GenomeElementCDSRel;
-import com.ohnosequences.neo4j.BasicEntity;
+import com.bio4j.neo4j.BasicEntity;
 import org.neo4j.graphdb.Direction;
 import org.neo4j.graphdb.Node;
 

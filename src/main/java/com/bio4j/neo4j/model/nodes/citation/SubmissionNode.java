@@ -22,7 +22,7 @@ import com.bio4j.neo4j.model.nodes.ProteinNode;
 import com.bio4j.neo4j.model.relationships.citation.submission.SubmissionAuthorRel;
 import com.bio4j.neo4j.model.relationships.citation.submission.SubmissionDbRel;
 import com.bio4j.neo4j.model.relationships.citation.submission.SubmissionProteinCitationRel;
-import com.ohnosequences.neo4j.BasicEntity;
+import com.bio4j.neo4j.BasicEntity;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
