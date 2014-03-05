@@ -18,7 +18,7 @@
 package com.bio4j.neo4j.model.relationships.features;
 
 import com.bio4j.neo4j.model.nodes.FeatureTypeNode;
-import com.ohnosequences.neo4j.BasicRelationship;
+import com.bio4j.neo4j.BasicRelationship;
 import org.neo4j.graphdb.Relationship;
 
 /**

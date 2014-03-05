@@ -18,7 +18,7 @@ package com.bio4j.neo4j.model.relationships.refseq;
 
 import com.bio4j.neo4j.model.nodes.refseq.GenomeElementNode;
 import com.bio4j.neo4j.model.nodes.refseq.rna.MiscRNANode;
-import com.ohnosequences.neo4j.BasicRelationship;
+import com.bio4j.neo4j.BasicRelationship;
 import org.neo4j.graphdb.Relationship;
 
 /**

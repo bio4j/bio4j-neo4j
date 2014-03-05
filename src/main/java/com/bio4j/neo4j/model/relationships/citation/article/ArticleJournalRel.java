@@ -19,7 +19,7 @@ package com.bio4j.neo4j.model.relationships.citation.article;
 
 import com.bio4j.neo4j.model.nodes.citation.ArticleNode;
 import com.bio4j.neo4j.model.nodes.citation.JournalNode;
-import com.ohnosequences.neo4j.BasicRelationship;
+import com.bio4j.neo4j.BasicRelationship;
 import org.neo4j.graphdb.Relationship;
 
 /**

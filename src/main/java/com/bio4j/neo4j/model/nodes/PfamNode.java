@@ -18,7 +18,7 @@
 package com.bio4j.neo4j.model.nodes;
 
 import com.bio4j.neo4j.model.relationships.protein.ProteinPfamRel;
-import com.ohnosequences.neo4j.BasicEntity;
+import com.bio4j.neo4j.BasicEntity;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;

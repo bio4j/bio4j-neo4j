@@ -16,7 +16,7 @@
  */
 package com.bio4j.neo4j.model.nodes;
 
-import com.ohnosequences.neo4j.BasicEntity;
+import com.bio4j.neo4j.BasicEntity;
 import org.neo4j.graphdb.Node;
 
 /**
