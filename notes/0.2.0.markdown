@@ -1,0 +1,1 @@
+This release corresponds to the bio4j abstract model `v0.11.0` with fixed package names and some refactoring
