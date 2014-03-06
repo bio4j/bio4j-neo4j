@@ -14,14 +14,14 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
-package com.bio4j.neo4j.programs;
+package com.bio4j.neo4jdb.programs;
 
-import com.bio4j.neo4j.model.nodes.OrganismNode;
-import com.bio4j.neo4j.model.nodes.ncbi.NCBITaxonNode;
-import com.bio4j.neo4j.model.relationships.ncbi.NCBITaxonParentRel;
-import com.bio4j.neo4j.model.relationships.ncbi.NCBITaxonRel;
-import com.bio4j.neo4j.model.util.Bio4jManager;
-import com.bio4j.neo4j.model.util.NodeRetriever;
+import com.bio4j.neo4jdb.model.nodes.OrganismNode;
+import com.bio4j.neo4jdb.model.nodes.ncbi.NCBITaxonNode;
+import com.bio4j.neo4jdb.model.relationships.ncbi.NCBITaxonParentRel;
+import com.bio4j.neo4jdb.model.relationships.ncbi.NCBITaxonRel;
+import com.bio4j.neo4jdb.model.util.Bio4jManager;
+import com.bio4j.neo4jdb.model.util.NodeRetriever;
 import com.ohnosequences.util.Executable;
 import java.io.*;
 import java.util.ArrayList;

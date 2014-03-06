@@ -14,9 +14,9 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
-package com.bio4j.neo4j.programs;
+package com.bio4j.neo4jdb.programs;
 
-import com.bio4j.neo4j.model.nodes.ncbi.NCBITaxonNode;
+import com.bio4j.neo4jdb.model.nodes.ncbi.NCBITaxonNode;
 import com.ohnosequences.util.Executable;
 import java.io.*;
 import java.util.ArrayList;

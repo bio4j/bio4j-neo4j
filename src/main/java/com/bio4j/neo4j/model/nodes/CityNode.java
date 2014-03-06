@@ -15,11 +15,11 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
 
-package com.bio4j.neo4j.model.nodes;
+package com.bio4j.neo4jdb.model.nodes;
 
-import com.bio4j.neo4j.model.nodes.citation.BookNode;
-import com.bio4j.neo4j.model.relationships.citation.book.BookCityRel;
-import com.bio4j.neo4j.BasicEntity;
+import com.bio4j.neo4jdb.model.nodes.citation.BookNode;
+import com.bio4j.neo4jdb.model.relationships.citation.book.BookCityRel;
+import com.bio4j.neo4jdb.BasicEntity;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;

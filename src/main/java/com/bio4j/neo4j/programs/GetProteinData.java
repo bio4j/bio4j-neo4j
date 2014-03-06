@@ -14,23 +14,23 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
-package com.bio4j.neo4j.programs;
+package com.bio4j.neo4jdb.programs;
 
-import com.bio4j.neo4j.model.nodes.TaxonNode;
-import com.bio4j.neo4j.model.nodes.ProteinNode;
-import com.bio4j.neo4j.model.nodes.KeywordNode;
-import com.bio4j.neo4j.model.nodes.InterproNode;
-import com.bio4j.neo4j.model.nodes.OrganismNode;
-import com.bio4j.neo4j.model.nodes.GoTermNode;
-import com.bio4j.neo4j.model.nodes.citation.ArticleNode;
-import com.bio4j.neo4j.model.nodes.citation.SubmissionNode;
-import com.bio4j.neo4j.model.relationships.TaxonParentRel;
-import com.bio4j.neo4j.model.relationships.protein.ProteinGoRel;
-import com.bio4j.neo4j.model.relationships.protein.ProteinInterproRel;
-import com.bio4j.neo4j.model.relationships.protein.ProteinKeywordRel;
-import com.bio4j.neo4j.model.relationships.uniref.UniRef90MemberRel;
-import com.bio4j.neo4j.model.util.Bio4jManager;
-import com.bio4j.neo4j.model.util.NodeRetriever;
+import com.bio4j.neo4jdb.model.nodes.TaxonNode;
+import com.bio4j.neo4jdb.model.nodes.ProteinNode;
+import com.bio4j.neo4jdb.model.nodes.KeywordNode;
+import com.bio4j.neo4jdb.model.nodes.InterproNode;
+import com.bio4j.neo4jdb.model.nodes.OrganismNode;
+import com.bio4j.neo4jdb.model.nodes.GoTermNode;
+import com.bio4j.neo4jdb.model.nodes.citation.ArticleNode;
+import com.bio4j.neo4jdb.model.nodes.citation.SubmissionNode;
+import com.bio4j.neo4jdb.model.relationships.TaxonParentRel;
+import com.bio4j.neo4jdb.model.relationships.protein.ProteinGoRel;
+import com.bio4j.neo4jdb.model.relationships.protein.ProteinInterproRel;
+import com.bio4j.neo4jdb.model.relationships.protein.ProteinKeywordRel;
+import com.bio4j.neo4jdb.model.relationships.uniref.UniRef90MemberRel;
+import com.bio4j.neo4jdb.model.util.Bio4jManager;
+import com.bio4j.neo4jdb.model.util.NodeRetriever;
 
 import java.io.IOException;
 import java.util.Iterator;

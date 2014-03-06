@@ -14,17 +14,17 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
-package com.bio4j.neo4j.programs;
+package com.bio4j.neo4jdb.programs;
 
-import com.bio4j.neo4j.model.nodes.AlternativeProductNode;
-import com.bio4j.neo4j.model.nodes.SequenceCautionNode;
-import com.bio4j.neo4j.model.relationships.aproducts.AlternativeProductInitiationRel;
-import com.bio4j.neo4j.model.relationships.aproducts.AlternativeProductPromoterRel;
-import com.bio4j.neo4j.model.relationships.aproducts.AlternativeProductRibosomalFrameshiftingRel;
-import com.bio4j.neo4j.model.relationships.aproducts.AlternativeProductSplicingRel;
-import com.bio4j.neo4j.model.relationships.protein.*;
-import com.bio4j.neo4j.model.relationships.sc.*;
-import com.bio4j.neo4j.model.util.Bio4jManager;
+import com.bio4j.neo4jdb.model.nodes.AlternativeProductNode;
+import com.bio4j.neo4jdb.model.nodes.SequenceCautionNode;
+import com.bio4j.neo4jdb.model.relationships.aproducts.AlternativeProductInitiationRel;
+import com.bio4j.neo4jdb.model.relationships.aproducts.AlternativeProductPromoterRel;
+import com.bio4j.neo4jdb.model.relationships.aproducts.AlternativeProductRibosomalFrameshiftingRel;
+import com.bio4j.neo4jdb.model.relationships.aproducts.AlternativeProductSplicingRel;
+import com.bio4j.neo4jdb.model.relationships.protein.*;
+import com.bio4j.neo4jdb.model.relationships.sc.*;
+import com.bio4j.neo4jdb.model.util.Bio4jManager;
 import com.ohnosequences.util.Executable;
 import java.io.File;
 import java.util.ArrayList;

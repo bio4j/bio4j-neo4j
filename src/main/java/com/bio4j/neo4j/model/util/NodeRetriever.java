@@ -14,13 +14,13 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
-package com.bio4j.neo4j.model.util;
+package com.bio4j.neo4jdb.model.util;
 
-import com.bio4j.neo4j.model.nodes.*;
-import com.bio4j.neo4j.model.nodes.citation.*;
-import com.bio4j.neo4j.model.nodes.ncbi.NCBITaxonNode;
-import com.bio4j.neo4j.model.nodes.reactome.ReactomeTermNode;
-import com.bio4j.neo4j.model.nodes.refseq.GenomeElementNode;
+import com.bio4j.neo4jdb.model.nodes.*;
+import com.bio4j.neo4jdb.model.nodes.citation.*;
+import com.bio4j.neo4jdb.model.nodes.ncbi.NCBITaxonNode;
+import com.bio4j.neo4jdb.model.nodes.reactome.ReactomeTermNode;
+import com.bio4j.neo4jdb.model.nodes.refseq.GenomeElementNode;
 import java.util.ArrayList;
 import java.util.List;
 import org.neo4j.graphdb.Node;

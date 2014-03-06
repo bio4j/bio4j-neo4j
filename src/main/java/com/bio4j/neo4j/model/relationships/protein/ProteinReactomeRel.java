@@ -15,11 +15,11 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
 
-package com.bio4j.neo4j.model.relationships.protein;
+package com.bio4j.neo4jdb.model.relationships.protein;
 
-import com.bio4j.neo4j.model.nodes.ProteinNode;
-import com.bio4j.neo4j.model.nodes.reactome.ReactomeTermNode;
-import com.bio4j.neo4j.BasicRelationship;
+import com.bio4j.neo4jdb.model.nodes.ProteinNode;
+import com.bio4j.neo4jdb.model.nodes.reactome.ReactomeTermNode;
+import com.bio4j.neo4jdb.BasicRelationship;
 import org.neo4j.graphdb.Relationship;
 
 /**

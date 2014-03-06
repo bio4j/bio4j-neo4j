@@ -14,13 +14,13 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
-package com.bio4j.neo4j.codesamples;
+package com.bio4j.neo4jdb.codesamples;
 
-import com.bio4j.neo4j.model.nodes.InterproNode;
-import com.bio4j.neo4j.model.nodes.ProteinNode;
-import com.bio4j.neo4j.model.relationships.protein.ProteinInterproRel;
-import com.bio4j.neo4j.model.util.Bio4jManager;
-import com.bio4j.neo4j.model.util.NodeRetriever;
+import com.bio4j.neo4jdb.model.nodes.InterproNode;
+import com.bio4j.neo4jdb.model.nodes.ProteinNode;
+import com.bio4j.neo4jdb.model.relationships.protein.ProteinInterproRel;
+import com.bio4j.neo4jdb.model.util.Bio4jManager;
+import com.bio4j.neo4jdb.model.util.NodeRetriever;
 import java.util.Iterator;
 import org.neo4j.graphdb.Direction;
 import org.neo4j.graphdb.Relationship;

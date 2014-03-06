@@ -13,7 +13,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
 
-package com.bio4j.neo4j;
+package com.bio4j.neo4jdb;
 
 import org.neo4j.graphdb.Node;
 import org.neo4j.graphdb.Relationship;

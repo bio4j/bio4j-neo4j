@@ -1,9 +1,9 @@
-package com.bio4j.neo4j.model.nodes;
+package com.bio4j.neo4jdb.model.nodes;
 
 import com.bio4j.model.nodes.Taxon;
 
-import com.bio4j.neo4j.model.relationships.TaxonParentRel;
-import com.bio4j.neo4j.BasicEntity;
+import com.bio4j.neo4jdb.model.relationships.TaxonParentRel;
+import com.bio4j.neo4jdb.BasicEntity;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;

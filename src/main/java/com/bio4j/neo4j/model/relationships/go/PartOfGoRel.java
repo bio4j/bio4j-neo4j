@@ -3,9 +3,9 @@
  * and open the template in the editor.
  */
 
-package com.bio4j.neo4j.model.relationships.go;
+package com.bio4j.neo4jdb.model.relationships.go;
 
-import com.bio4j.neo4j.BasicRelationship;
+import com.bio4j.neo4jdb.BasicRelationship;
 import org.neo4j.graphdb.Relationship;
 
 /**

@@ -14,13 +14,13 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
-package com.bio4j.neo4j.codesamples;
+package com.bio4j.neo4jdb.codesamples;
 
-import com.bio4j.neo4j.model.nodes.OrganismNode;
-import com.bio4j.neo4j.model.nodes.ProteinNode;
-import com.bio4j.neo4j.model.util.Bio4jManager;
-import com.bio4j.neo4j.model.util.GoUtil;
-import com.bio4j.neo4j.model.util.NodeRetriever;
+import com.bio4j.neo4jdb.model.nodes.OrganismNode;
+import com.bio4j.neo4jdb.model.nodes.ProteinNode;
+import com.bio4j.neo4jdb.model.util.Bio4jManager;
+import com.bio4j.neo4jdb.model.util.GoUtil;
+import com.bio4j.neo4jdb.model.util.NodeRetriever;
 import com.ohnosequences.xml.model.go.GoAnnotationXML;
 import com.ohnosequences.xml.model.uniprot.ProteinXML;
 import com.ohnosequences.xml.api.util.XMLUtil;

@@ -15,11 +15,11 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
 
-package com.bio4j.neo4j.model.relationships.citation.onarticle;
+package com.bio4j.neo4jdb.model.relationships.citation.onarticle;
 
-import com.bio4j.neo4j.model.nodes.citation.OnlineArticleNode;
-import com.bio4j.neo4j.model.nodes.citation.OnlineJournalNode;
-import com.bio4j.neo4j.BasicRelationship;
+import com.bio4j.neo4jdb.model.nodes.citation.OnlineArticleNode;
+import com.bio4j.neo4jdb.model.nodes.citation.OnlineJournalNode;
+import com.bio4j.neo4jdb.BasicRelationship;
 import org.neo4j.graphdb.Relationship;
 
 /**

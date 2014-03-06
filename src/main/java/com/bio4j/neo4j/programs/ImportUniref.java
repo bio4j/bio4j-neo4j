@@ -14,15 +14,15 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
-package com.bio4j.neo4j.programs;
+package com.bio4j.neo4jdb.programs;
 
-import com.bio4j.neo4j.model.nodes.IsoformNode;
-import com.bio4j.neo4j.model.nodes.ProteinNode;
-import com.bio4j.neo4j.model.relationships.uniref.UniRef100MemberRel;
-import com.bio4j.neo4j.model.relationships.uniref.UniRef50MemberRel;
-import com.bio4j.neo4j.model.relationships.uniref.UniRef90MemberRel;
-import com.bio4j.neo4j.model.util.UniprotStuff;
-import com.bio4j.neo4j.BasicRelationship;
+import com.bio4j.neo4jdb.model.nodes.IsoformNode;
+import com.bio4j.neo4jdb.model.nodes.ProteinNode;
+import com.bio4j.neo4jdb.model.relationships.uniref.UniRef100MemberRel;
+import com.bio4j.neo4jdb.model.relationships.uniref.UniRef50MemberRel;
+import com.bio4j.neo4jdb.model.relationships.uniref.UniRef90MemberRel;
+import com.bio4j.neo4jdb.model.util.UniprotStuff;
+import com.bio4j.neo4jdb.BasicRelationship;
 import com.ohnosequences.util.Executable;
 import com.ohnosequences.xml.api.model.XMLElement;
 

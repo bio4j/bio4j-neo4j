@@ -15,10 +15,10 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
 
-package com.bio4j.neo4j.model.nodes.refseq;
+package com.bio4j.neo4jdb.model.nodes.refseq;
 
-import com.bio4j.neo4j.model.relationships.refseq.GenomeElementCDSRel;
-import com.bio4j.neo4j.BasicEntity;
+import com.bio4j.neo4jdb.model.relationships.refseq.GenomeElementCDSRel;
+import com.bio4j.neo4jdb.BasicEntity;
 import org.neo4j.graphdb.Direction;
 import org.neo4j.graphdb.Node;
 

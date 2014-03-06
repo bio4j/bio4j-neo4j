@@ -15,15 +15,15 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
 
-package com.bio4j.neo4j.model.nodes.citation;
+package com.bio4j.neo4jdb.model.nodes.citation;
 
-import com.bio4j.neo4j.model.nodes.InstituteNode;
-import com.bio4j.neo4j.model.nodes.PersonNode;
-import com.bio4j.neo4j.model.nodes.ProteinNode;
-import com.bio4j.neo4j.model.relationships.citation.thesis.ThesisAuthorRel;
-import com.bio4j.neo4j.model.relationships.citation.thesis.ThesisInstituteRel;
-import com.bio4j.neo4j.model.relationships.citation.thesis.ThesisProteinCitationRel;
-import com.bio4j.neo4j.BasicEntity;
+import com.bio4j.neo4jdb.model.nodes.InstituteNode;
+import com.bio4j.neo4jdb.model.nodes.PersonNode;
+import com.bio4j.neo4jdb.model.nodes.ProteinNode;
+import com.bio4j.neo4jdb.model.relationships.citation.thesis.ThesisAuthorRel;
+import com.bio4j.neo4jdb.model.relationships.citation.thesis.ThesisInstituteRel;
+import com.bio4j.neo4jdb.model.relationships.citation.thesis.ThesisProteinCitationRel;
+import com.bio4j.neo4jdb.BasicEntity;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;

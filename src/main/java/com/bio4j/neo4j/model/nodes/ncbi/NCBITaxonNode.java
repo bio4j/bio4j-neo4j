@@ -2,12 +2,12 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.bio4j.neo4j.model.nodes.ncbi;
+package com.bio4j.neo4jdb.model.nodes.ncbi;
 
-import com.bio4j.neo4j.model.nodes.TaxonNode;
-import com.bio4j.neo4j.model.relationships.ncbi.NCBITaxonParentRel;
-import com.bio4j.neo4j.model.relationships.ncbi.NCBITaxonRel;
-import com.bio4j.neo4j.BasicEntity;
+import com.bio4j.neo4jdb.model.nodes.TaxonNode;
+import com.bio4j.neo4jdb.model.relationships.ncbi.NCBITaxonParentRel;
+import com.bio4j.neo4jdb.model.relationships.ncbi.NCBITaxonRel;
+import com.bio4j.neo4jdb.BasicEntity;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;

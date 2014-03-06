@@ -14,10 +14,10 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
-package com.bio4j.neo4j.model.nodes.refseq.rna;
+package com.bio4j.neo4jdb.model.nodes.refseq.rna;
 
-import com.bio4j.neo4j.model.nodes.refseq.GenomeElementNode;
-import com.bio4j.neo4j.model.relationships.refseq.GenomeElementTmRnaRel;
+import com.bio4j.neo4jdb.model.nodes.refseq.GenomeElementNode;
+import com.bio4j.neo4jdb.model.relationships.refseq.GenomeElementTmRnaRel;
 import org.neo4j.graphdb.Direction;
 import org.neo4j.graphdb.Node;
 

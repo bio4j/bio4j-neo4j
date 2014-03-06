@@ -15,9 +15,9 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
 
-package com.bio4j.neo4j.model.nodes;
+package com.bio4j.neo4jdb.model.nodes;
 
-import com.bio4j.neo4j.BasicEntity;
+import com.bio4j.neo4jdb.BasicEntity;
 import org.neo4j.graphdb.Node;
 
 /**

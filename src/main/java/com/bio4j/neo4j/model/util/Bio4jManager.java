@@ -2,17 +2,17 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.bio4j.neo4j.model.util;
+package com.bio4j.neo4jdb.model.util;
 
-import com.bio4j.neo4j.model.nodes.*;
-import com.bio4j.neo4j.model.nodes.citation.*;
-import com.bio4j.neo4j.model.nodes.ncbi.NCBITaxonNode;
-import com.bio4j.neo4j.model.nodes.reactome.ReactomeTermNode;
-import com.bio4j.neo4j.model.nodes.refseq.GenomeElementNode;
-import com.bio4j.neo4j.model.relationships.SubcellularLocationParentRel;
-import com.bio4j.neo4j.model.relationships.go.IsAGoRel;
-import com.bio4j.neo4j.BasicEntity;
-import com.bio4j.neo4j.Neo4jManager;
+import com.bio4j.neo4jdb.model.nodes.*;
+import com.bio4j.neo4jdb.model.nodes.citation.*;
+import com.bio4j.neo4jdb.model.nodes.ncbi.NCBITaxonNode;
+import com.bio4j.neo4jdb.model.nodes.reactome.ReactomeTermNode;
+import com.bio4j.neo4jdb.model.nodes.refseq.GenomeElementNode;
+import com.bio4j.neo4jdb.model.relationships.SubcellularLocationParentRel;
+import com.bio4j.neo4jdb.model.relationships.go.IsAGoRel;
+import com.bio4j.neo4jdb.BasicEntity;
+import com.bio4j.neo4jdb.Neo4jManager;
 import java.util.HashMap;
 import java.util.Map;
 import org.neo4j.graphdb.Node;

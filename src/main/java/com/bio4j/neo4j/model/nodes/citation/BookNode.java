@@ -14,13 +14,13 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
-package com.bio4j.neo4j.model.nodes.citation;
+package com.bio4j.neo4jdb.model.nodes.citation;
 
-import com.bio4j.neo4j.model.nodes.CityNode;
-import com.bio4j.neo4j.model.nodes.PersonNode;
-import com.bio4j.neo4j.model.nodes.ProteinNode;
-import com.bio4j.neo4j.model.relationships.citation.book.*;
-import com.bio4j.neo4j.BasicEntity;
+import com.bio4j.neo4jdb.model.nodes.CityNode;
+import com.bio4j.neo4jdb.model.nodes.PersonNode;
+import com.bio4j.neo4jdb.model.nodes.ProteinNode;
+import com.bio4j.neo4jdb.model.relationships.citation.book.*;
+import com.bio4j.neo4jdb.BasicEntity;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;

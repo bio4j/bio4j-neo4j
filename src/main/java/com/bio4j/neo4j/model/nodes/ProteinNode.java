@@ -14,31 +14,31 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
-package com.bio4j.neo4j.model.nodes;
+package com.bio4j.neo4jdb.model.nodes;
 
-import com.bio4j.neo4j.model.nodes.citation.*;
-import com.bio4j.neo4j.model.nodes.reactome.ReactomeTermNode;
-import com.bio4j.neo4j.model.nodes.refseq.GenomeElementNode;
-import com.bio4j.neo4j.model.relationships.citation.article.ArticleProteinCitationRel;
-import com.bio4j.neo4j.model.relationships.citation.book.BookProteinCitationRel;
-import com.bio4j.neo4j.model.relationships.citation.onarticle.OnlineArticleProteinCitationRel;
-import com.bio4j.neo4j.model.relationships.citation.patent.PatentProteinCitationRel;
-import com.bio4j.neo4j.model.relationships.citation.submission.SubmissionProteinCitationRel;
-import com.bio4j.neo4j.model.relationships.citation.thesis.ThesisProteinCitationRel;
-import com.bio4j.neo4j.model.relationships.citation.uo.UnpublishedObservationProteinCitationRel;
-import com.bio4j.neo4j.model.relationships.comment.DomainCommentRel;
-import com.bio4j.neo4j.model.relationships.comment.FunctionCommentRel;
-import com.bio4j.neo4j.model.relationships.comment.PathwayCommentRel;
-import com.bio4j.neo4j.model.relationships.comment.SimilarityCommentRel;
-import com.bio4j.neo4j.model.relationships.features.ActiveSiteFeatureRel;
-import com.bio4j.neo4j.model.relationships.features.SignalPeptideFeatureRel;
-import com.bio4j.neo4j.model.relationships.features.SpliceVariantFeatureRel;
-import com.bio4j.neo4j.model.relationships.features.TransmembraneRegionFeatureRel;
-import com.bio4j.neo4j.model.relationships.protein.*;
-import com.bio4j.neo4j.model.relationships.uniref.UniRef100MemberRel;
-import com.bio4j.neo4j.model.relationships.uniref.UniRef50MemberRel;
-import com.bio4j.neo4j.model.relationships.uniref.UniRef90MemberRel;
-import com.bio4j.neo4j.BasicEntity;
+import com.bio4j.neo4jdb.model.nodes.citation.*;
+import com.bio4j.neo4jdb.model.nodes.reactome.ReactomeTermNode;
+import com.bio4j.neo4jdb.model.nodes.refseq.GenomeElementNode;
+import com.bio4j.neo4jdb.model.relationships.citation.article.ArticleProteinCitationRel;
+import com.bio4j.neo4jdb.model.relationships.citation.book.BookProteinCitationRel;
+import com.bio4j.neo4jdb.model.relationships.citation.onarticle.OnlineArticleProteinCitationRel;
+import com.bio4j.neo4jdb.model.relationships.citation.patent.PatentProteinCitationRel;
+import com.bio4j.neo4jdb.model.relationships.citation.submission.SubmissionProteinCitationRel;
+import com.bio4j.neo4jdb.model.relationships.citation.thesis.ThesisProteinCitationRel;
+import com.bio4j.neo4jdb.model.relationships.citation.uo.UnpublishedObservationProteinCitationRel;
+import com.bio4j.neo4jdb.model.relationships.comment.DomainCommentRel;
+import com.bio4j.neo4jdb.model.relationships.comment.FunctionCommentRel;
+import com.bio4j.neo4jdb.model.relationships.comment.PathwayCommentRel;
+import com.bio4j.neo4jdb.model.relationships.comment.SimilarityCommentRel;
+import com.bio4j.neo4jdb.model.relationships.features.ActiveSiteFeatureRel;
+import com.bio4j.neo4jdb.model.relationships.features.SignalPeptideFeatureRel;
+import com.bio4j.neo4jdb.model.relationships.features.SpliceVariantFeatureRel;
+import com.bio4j.neo4jdb.model.relationships.features.TransmembraneRegionFeatureRel;
+import com.bio4j.neo4jdb.model.relationships.protein.*;
+import com.bio4j.neo4jdb.model.relationships.uniref.UniRef100MemberRel;
+import com.bio4j.neo4jdb.model.relationships.uniref.UniRef50MemberRel;
+import com.bio4j.neo4jdb.model.relationships.uniref.UniRef90MemberRel;
+import com.bio4j.neo4jdb.BasicEntity;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
