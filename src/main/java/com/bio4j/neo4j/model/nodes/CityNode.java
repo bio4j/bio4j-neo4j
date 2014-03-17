@@ -31,7 +31,7 @@ import org.neo4j.graphdb.Relationship;
  * Just nodes representing different cities of the world
  * @author Pablo Pareja Tobes <ppareja@era7.com>
  */
-public class CityNode extends BasicEntity{
+public class CityNode extends BasicEntity {
 
     public static final String NODE_TYPE = CityNode.class.getCanonicalName();
     public static final String CITY_NAME_INDEX = "city_name_index";

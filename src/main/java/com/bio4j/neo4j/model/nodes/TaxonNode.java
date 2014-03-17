@@ -28,8 +28,7 @@ public class TaxonNode extends BasicEntity {
         super(n);
     }
 
-
-    public String getName(){    return String.valueOf(node.getProperty(NAME_PROPERTY));}
+    public String getName(){ return String.valueOf(node.getProperty(NAME_PROPERTY));}
 
 
     public void setName(String value){  node.setProperty(NAME_PROPERTY, value);}
