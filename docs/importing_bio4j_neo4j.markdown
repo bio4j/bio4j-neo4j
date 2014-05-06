@@ -28,7 +28,7 @@ Here's the link to the official website describing how to [install JDK 7 for Lin
 
 ### 7. Get the last versions of the following files:
 
-- [neo4jdb-0.x.x-fat.jar](/docs/releases.markdown) _(get the correponding jar file for the release you want to use)_
+- [neo4jdb-0.x.x-fat.jar](https://github.com/bio4j/neo4jdb/releases) _(get the correponding jar file for the release you want to use)_
 - [executionsBio4j.xml](/executionsBio4j.xml) _(this file can be customized in order to just import a sub-set of the data available)_
 - [batchInserter.properties](/batchInserter.properties)  _**IMPORTANT** -->(this file should be changed according to the amount of RAM memory available in your machine)_
 - [uniprotData.xml](/uniprotData.xml) _This file will only be used in the case where you want to import Uniprot module. (Set the boolean flags included in the XML file to true/false depending on your choice of data you want to import from Uniprot)_
@@ -59,14 +59,14 @@ The corresponding executions.xml file should look like this:
 ``` xml
 <scheduled_executions>
   <execution>
-    <class_full_name>com.ohnosequences.bio4j.neo4j.programs.InitBio4jDB</class_full_name>
+    <class_full_name>com.bio4j.neo4jdb.programs.InitBio4jDB</class_full_name>
     <arguments>
       <argument>bio4jdb</argument>
       <argument>batchInserter.properties</argument>
     </arguments>
   </execution>
   <execution>
-    <class_full_name>com.ohnosequences.bio4j.neo4j.programs.ImportEnzymeDB</class_full_name>
+    <class_full_name>com.bio4j.neo4jdb.programs.ImportEnzymeDB</class_full_name>
     <arguments>
       <argument>enzyme.dat</argument>
       <argument>bio4jdb</argument>
@@ -74,7 +74,7 @@ The corresponding executions.xml file should look like this:
     </arguments>
   </execution>
   <execution>
-    <class_full_name>com.ohnosequences.bio4j.neo4j.programs.ImportGeneOntology</class_full_name>
+    <class_full_name>com.bio4j.neo4jdb.programs.ImportGeneOntology</class_full_name>
     <arguments>
       <argument>go.xml</argument>
       <argument>bio4jdb</argument>
@@ -82,7 +82,7 @@ The corresponding executions.xml file should look like this:
     </arguments>
   </execution>
   <execution>
-    <class_full_name>com.ohnosequences.bio4j.neo4j.programs.ImportUniprot</class_full_name>
+    <class_full_name>com.bio4j.neo4jdb.programs.ImportUniprot</class_full_name>
     <arguments>
       <argument>uniprot_sprot.xml</argument>
       <argument>bio4jdb</argument>
@@ -90,7 +90,7 @@ The corresponding executions.xml file should look like this:
     </arguments>
   </execution>
   <execution>
-    <class_full_name>com.ohnosequences.bio4j.neo4j.programs.ImportNCBITaxonomy</class_full_name>
+    <class_full_name>com.bio4j.neo4jdb.programs.ImportNCBITaxonomy</class_full_name>
     <arguments>
       <argument>nodes.dmp</argument>
       <argument>names.dmp</argument>
@@ -118,7 +118,7 @@ tar -xvf taxdump.tar.gz
 ### 9. Launch importing process in background
 
 ```  bash
-java -d64 -Xmx30G -jar ExecuteBio4jTool.jar executionsBio4j.xml &
+java -d64 -Xmx30G -jar neo4jdb-0.x.x-fat.jar executionsBio4j.xml &
 ```
 
 Different log files will be created at jar folder level regarding the progress of the data importation
