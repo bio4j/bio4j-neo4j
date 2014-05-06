@@ -1,28 +1,71 @@
-<scheduled_executions>      
-        <execution>
-                <class_full_name>com.ohnosequences.bio4j.neo4j.programs.InitBio4jDB</class_full_name>
-                <arguments>
-                        <argument>bio4jdb</argument>
-                        <argument>batchInserter.properties</argument>
-                </arguments>
-        </execution>     
-		<execution>
-                <class_full_name>com.ohnosequences.bio4j.neo4j.programs.ImportNCBITaxonomy</class_full_name>
-                <arguments>
-                        <argument>nodes.dmp</argument>
-                        <argument>names.dmp</argument>
-                        <argument>merged.dmp</argument>
-                        <argument>bio4jdb</argument>
-                        <argument>true</argument>
-                </arguments>
-        </execution>
-        
-        <execution>
-                <class_full_name>com.ohnosequences.bio4j.neo4j.programs.IndexNCBITaxonomyByGiId</class_full_name>
-                <arguments>
-                        <argument>gi_taxid_nucl.dmp</argument>
-                        <argument>bio4jdb</argument>
-                        <argument>batchInserter.properties</argument>                        
-                </arguments>
-        </execution>  
+<scheduled_executions>
+  <execution>
+    <class_full_name>com.era7.bioinfo.bio4j.neo4j.programs.InitBio4jDB</class_full_name>
+    <arguments>
+      <argument>bio4jdb</argument>
+      <argument>batchInserter.properties</argument>
+    </arguments>
+  </execution>
+  <execution>
+    <class_full_name>com.era7.bioinfo.bio4j.neo4j.programs.ImportEnzymeDB</class_full_name>
+    <arguments>
+      <argument>enzyme.dat</argument>
+      <argument>bio4jdb</argument>
+      <argument>batchInserter.properties</argument>
+    </arguments>
+  </execution>
+  <execution>
+    <class_full_name>com.era7.bioinfo.bio4j.neo4j.programs.ImportGeneOntology</class_full_name>
+    <arguments>
+      <argument>go.xml</argument>
+      <argument>bio4jdb</argument>
+      <argument>batchInserter.properties</argument>
+    </arguments>
+  </execution>
+  <execution>
+    <class_full_name>com.era7.bioinfo.bio4j.neo4j.programs.ImportUniprot</class_full_name>
+    <arguments>
+      <argument>uniprot_sprot.xml</argument>
+      <argument>bio4jdb</argument>
+      <argument>batchInserter.properties</argument>
+      <argument>uniprotData.xml</argument>
+    </arguments>
+  </execution>
+      <execution>
+        <class_full_name>com.era7.bioinfo.bio4j.neo4j.programs.ImportUniprot</class_full_name>
+        <arguments>
+            <argument>uniprot_trembl.xml</argument>
+            <argument>bio4jdb</argument><!-- Database folder -->
+            <argument>batchInserter.properties</argument><!--Batch inserter properties file-->
+            <argument>uniprotData.xml</argument><!--XML file used to customize the amount of data imported-->
+        </arguments>
+    </execution>   
+  <execution>
+    <class_full_name>com.era7.bioinfo.bio4j.neo4j.programs.ImportNCBITaxonomy</class_full_name>
+    <arguments>
+      <argument>nodes.dmp</argument>
+      <argument>names.dmp</argument>
+      <argument>merged.dmp</argument>
+      <argument>bio4jdb</argument>
+      <argument>true</argument>
+    </arguments>
+  </execution>
+    <execution>
+        <class_full_name>com.era7.bioinfo.bio4j.neo4j.programs.ImportRefSeq</class_full_name>
+        <arguments>
+            <argument>refseq_data</argument><!-- Folder including all .gbff files -->
+            <argument>bio4jdb</argument><!--Database folder-->
+            <argument>batchInserter.properties</argument><!--Batch inserter properties file-->
+        </arguments>
+    </execution>  
+  <execution>
+    <class_full_name>com.era7.bioinfo.bio4j.neo4j.programs.ImportUniref</class_full_name>
+        <arguments>
+            <argument>uniref100.xml</argument><!--UniRef 100 XML file-->
+            <argument>uniref90.xml</argument><!--UniRef 90 XML file-->
+            <argument>uniref50.xml</argument><!--UniRef 50 XML file-->
+            <argument>bio4jdb</argument><!--Database folder-->
+            <argument>batchInserter.properties</argument><!--Batch inserter properties file-->
+        </arguments>
+    </execution>    
 </scheduled_executions>
