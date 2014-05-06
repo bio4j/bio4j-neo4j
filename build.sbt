@@ -30,7 +30,7 @@ dependencyOverrides ++= Set(
 )
 
 // fat jar assembly settings
-mainClass in assembly := Some("com.ohnosequences.bio4j.neo4j.programs.ImportNeo4jDB")
+mainClass in assembly := Some("com.bio4j.neo4jdb.programs.ImportNeo4jDB")
 
 assemblyOption in assembly ~= { _.copy(includeScala = false) }
 

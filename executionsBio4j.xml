@@ -1,13 +1,13 @@
 <scheduled_executions>
   <execution>
-    <class_full_name>com.era7.bioinfo.bio4j.neo4j.programs.InitBio4jDB</class_full_name>
+    <class_full_name>com.bio4j.neo4jdb.programs.InitBio4jDB</class_full_name>
     <arguments>
       <argument>bio4jdb</argument>
       <argument>batchInserter.properties</argument>
     </arguments>
   </execution>
   <execution>
-    <class_full_name>com.era7.bioinfo.bio4j.neo4j.programs.ImportEnzymeDB</class_full_name>
+    <class_full_name>com.bio4j.neo4jdb.programs.ImportEnzymeDB</class_full_name>
     <arguments>
       <argument>enzyme.dat</argument>
       <argument>bio4jdb</argument>
@@ -15,7 +15,7 @@
     </arguments>
   </execution>
   <execution>
-    <class_full_name>com.era7.bioinfo.bio4j.neo4j.programs.ImportGeneOntology</class_full_name>
+    <class_full_name>com.bio4j.neo4jdb.programs.ImportGeneOntology</class_full_name>
     <arguments>
       <argument>go.xml</argument>
       <argument>bio4jdb</argument>
@@ -23,7 +23,7 @@
     </arguments>
   </execution>
   <execution>
-    <class_full_name>com.era7.bioinfo.bio4j.neo4j.programs.ImportUniprot</class_full_name>
+    <class_full_name>com.bio4j.neo4jdb.programs.ImportUniprot</class_full_name>
     <arguments>
       <argument>uniprot_sprot.xml</argument>
       <argument>bio4jdb</argument>
@@ -32,7 +32,7 @@
     </arguments>
   </execution>
       <execution>
-        <class_full_name>com.era7.bioinfo.bio4j.neo4j.programs.ImportUniprot</class_full_name>
+        <class_full_name>com.bio4j.neo4jdb.programs.ImportUniprot</class_full_name>
         <arguments>
             <argument>uniprot_trembl.xml</argument>
             <argument>bio4jdb</argument><!-- Database folder -->
@@ -41,7 +41,7 @@
         </arguments>
     </execution>   
   <execution>
-    <class_full_name>com.era7.bioinfo.bio4j.neo4j.programs.ImportNCBITaxonomy</class_full_name>
+    <class_full_name>com.bio4j.neo4jdb.programs.ImportNCBITaxonomy</class_full_name>
     <arguments>
       <argument>nodes.dmp</argument>
       <argument>names.dmp</argument>
@@ -51,7 +51,7 @@
     </arguments>
   </execution>
     <execution>
-        <class_full_name>com.era7.bioinfo.bio4j.neo4j.programs.ImportRefSeq</class_full_name>
+        <class_full_name>com.bio4j.neo4jdb.programs.ImportRefSeq</class_full_name>
         <arguments>
             <argument>refseq_data</argument><!-- Folder including all .gbff files -->
             <argument>bio4jdb</argument><!--Database folder-->
@@ -59,7 +59,7 @@
         </arguments>
     </execution>  
   <execution>
-    <class_full_name>com.era7.bioinfo.bio4j.neo4j.programs.ImportUniref</class_full_name>
+    <class_full_name>com.bio4j.neo4jdb.programs.ImportUniref</class_full_name>
         <arguments>
             <argument>uniref100.xml</argument><!--UniRef 100 XML file-->
             <argument>uniref90.xml</argument><!--UniRef 90 XML file-->
