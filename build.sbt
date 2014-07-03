@@ -2,6 +2,8 @@ import AssemblyKeys._
 
 Nice.javaProject
 
+javaVersion := "1.8"
+
 fatArtifactSettings
 
 organization := "bio4j"
@@ -12,12 +14,15 @@ description := "Neo4jdb implementation of the Bio4j model"
 
 bucketSuffix := "era7.com"
 
+
 libraryDependencies ++= Seq(
   "bio4j" % "bio4j" % "0.12.0-SNAPSHOT",
   "com.amazonaws" % "aws-java-sdk" % "1.8.3",
+  "ohnosequences" % "bioinfo-util" % "1.3.0",
   "org.apache.httpcomponents" % "httpclient" % "4.3.4",
   "org.apache.commons" % "commons-math" % "2.2",
-  "org.jdom" % "jdom" % "2.0.2"
+  "junit" % "junit" % "3.8.1" % "test",
+  "net.sf.opencsv" % "opencsv" % "2.3"
 )
 
 dependencyOverrides ++= Set(
@@ -25,7 +30,7 @@ dependencyOverrides ++= Set(
   "com.fasterxml.jackson.core" % "jackson-databind" % "2.1.2",
   "commons-beanutils" % "commons-beanutils" % "1.8.3",
   "commons-beanutils" % "commons-beanutils-core" % "1.8.3",
-  "commons-codec" % "commons-codec" % "1.6"
+  "commons-codec" % "commons-codec" % "1.6",
   "net.sf.opencsv" % "opencsv" % "2.3"
 )
 
