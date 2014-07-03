@@ -15,7 +15,7 @@ bucketSuffix := "era7.com"
 libraryDependencies ++= Seq(
   "bio4j" % "bio4j" % "0.12.0-SNAPSHOT",
   "com.amazonaws" % "aws-java-sdk" % "1.8.3",
-  "org.apache.httpcomponents" % "httpclient" % "4.2",
+  "org.apache.httpcomponents" % "httpclient" % "4.3.4",
   "org.apache.commons" % "commons-math" % "2.2",
   "org.jdom" % "jdom" % "2.0.2"
 )
