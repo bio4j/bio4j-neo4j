@@ -26,6 +26,7 @@ dependencyOverrides ++= Set(
   "commons-beanutils" % "commons-beanutils" % "1.8.3",
   "commons-beanutils" % "commons-beanutils-core" % "1.8.3",
   "commons-codec" % "commons-codec" % "1.6"
+  "net.sf.opencsv" % "opencsv" % "2.3"
 )
 
 // fat jar assembly settings
