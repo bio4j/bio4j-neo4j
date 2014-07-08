@@ -19,13 +19,14 @@ libraryDependencies ++= Seq(
   "bio4j" % "bio4j" % "0.12.0-SNAPSHOT",
   "ohnosequences" % "bioinfo-util" % "1.4.0-SNAPSHOT",
   "org.apache.commons" % "commons-math" % "2.2",
-  "junit" % "junit" % "3.8.1" % "test",
-  "net.sf.opencsv" % "opencsv" % "2.3"
+  "net.sf.opencsv" % "opencsv" % "2.3",
+  "junit" % "junit" % "4.11" % "test"
 )
 
 dependencyOverrides ++= Set(
   "com.fasterxml.jackson.core" % "jackson-core" % "2.1.2",
   "com.fasterxml.jackson.core" % "jackson-databind" % "2.1.2",
+  "com.fasterxml.jackson.core" % "jackson-annotations" % "2.1.2",
   "commons-beanutils" % "commons-beanutils" % "1.8.3",
   "commons-beanutils" % "commons-beanutils-core" % "1.8.3",
   "commons-codec" % "commons-codec" % "1.6",
