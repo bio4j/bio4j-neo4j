@@ -35,7 +35,7 @@ Here's the link to the official website describing how to [install JDK 7 for Lin
    
 ### 8. Download and execute the following bash script:
 
-- [DownloadAndPrepareBio4jSources.sh](https://github.com/bio4j/Bio4j/blob/master/DownloadAndPrepareBio4jSources.sh)
+- [DownloadAndPrepareBio4jSources.sh](https://raw.githubusercontent.com/bio4j/neo4jdb/master/docs/DownloadAndPrepareBio4jSources.sh)
 
 This script download and decompresses all the sources needed to build a full Bio4j DB (Swissprot, TrEMBL, GO, RefSeq, etc).
 
