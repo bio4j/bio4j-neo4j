@@ -23,7 +23,7 @@ import org.neo4j.graphdb.RelationshipType;
  *
  * @author ppareja
  */
-public abstract class BasicRelationship implements RelationshipType{
+public abstract class BasicRelationship implements RelationshipType {
     
     protected Relationship relationship = null;
 
